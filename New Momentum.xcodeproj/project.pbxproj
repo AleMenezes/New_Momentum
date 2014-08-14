@@ -1,0 +1,543 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F68B8C98199552230042E014 /* StageGeneric.m in Sources */ = {isa = PBXBuildFile; fileRef = F68B8C97199552230042E014 /* StageGeneric.m */; };
+		F68B8CA1199557EC0042E014 /* Stage1.m in Sources */ = {isa = PBXBuildFile; fileRef = F68B8CA0199557EC0042E014 /* Stage1.m */; };
+		F6AA975E1937C7CC00D5AAE6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6AA975D1937C7CC00D5AAE6 /* Foundation.framework */; };
+		F6AA97601937C7CC00D5AAE6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6AA975F1937C7CC00D5AAE6 /* CoreGraphics.framework */; };
+		F6AA97621937C7CC00D5AAE6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6AA97611937C7CC00D5AAE6 /* UIKit.framework */; };
+		F6AA97641937C7CC00D5AAE6 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6AA97631937C7CC00D5AAE6 /* SpriteKit.framework */; };
+		F6AA976A1937C7CC00D5AAE6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F6AA97681937C7CC00D5AAE6 /* InfoPlist.strings */; };
+		F6AA976C1937C7CC00D5AAE6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AA976B1937C7CC00D5AAE6 /* main.m */; };
+		F6AA97701937C7CC00D5AAE6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AA976F1937C7CC00D5AAE6 /* AppDelegate.m */; };
+		F6AA97731937C7CC00D5AAE6 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6AA97711937C7CC00D5AAE6 /* Main_iPhone.storyboard */; };
+		F6AA97761937C7CC00D5AAE6 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6AA97741937C7CC00D5AAE6 /* Main_iPad.storyboard */; };
+		F6AA97791937C7CC00D5AAE6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AA97781937C7CC00D5AAE6 /* ViewController.m */; };
+		F6AA97801937C7CC00D5AAE6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6AA977F1937C7CC00D5AAE6 /* Images.xcassets */; };
+		F6AA97871937C7CC00D5AAE6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6AA97861937C7CC00D5AAE6 /* XCTest.framework */; };
+		F6AA97881937C7CC00D5AAE6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6AA975D1937C7CC00D5AAE6 /* Foundation.framework */; };
+		F6AA97891937C7CC00D5AAE6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6AA97611937C7CC00D5AAE6 /* UIKit.framework */; };
+		F6AA97911937C7CC00D5AAE6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F6AA978F1937C7CC00D5AAE6 /* InfoPlist.strings */; };
+		F6AA97931937C7CC00D5AAE6 /* New_MomentumTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AA97921937C7CC00D5AAE6 /* New_MomentumTests.m */; };
+		F6AA979E1937C82D00D5AAE6 /* InitialMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AA979D1937C82D00D5AAE6 /* InitialMenu.m */; };
+		F6D44618199412BE003F2AEA /* gold sphere.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D44616199412BE003F2AEA /* gold sphere.png */; };
+		F6D4461A199412D7003F2AEA /* blue sphere.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D44619199412D7003F2AEA /* blue sphere.png */; };
+		F6D4461E19941461003F2AEA /* BallGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D4461D19941461003F2AEA /* BallGenerator.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F6AA978A1937C7CC00D5AAE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6AA97521937C7CC00D5AAE6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F6AA97591937C7CC00D5AAE6;
+			remoteInfo = "New Momentum";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F68B8C96199552230042E014 /* StageGeneric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StageGeneric.h; sourceTree = "<group>"; };
+		F68B8C97199552230042E014 /* StageGeneric.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StageGeneric.m; sourceTree = "<group>"; };
+		F68B8C9F199557EC0042E014 /* Stage1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stage1.h; sourceTree = "<group>"; };
+		F68B8CA0199557EC0042E014 /* Stage1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stage1.m; sourceTree = "<group>"; };
+		F6AA975A1937C7CC00D5AAE6 /* New Momentum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "New Momentum.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6AA975D1937C7CC00D5AAE6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F6AA975F1937C7CC00D5AAE6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F6AA97611937C7CC00D5AAE6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F6AA97631937C7CC00D5AAE6 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		F6AA97671937C7CC00D5AAE6 /* New Momentum-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "New Momentum-Info.plist"; sourceTree = "<group>"; };
+		F6AA97691937C7CC00D5AAE6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F6AA976B1937C7CC00D5AAE6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F6AA976D1937C7CC00D5AAE6 /* New Momentum-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "New Momentum-Prefix.pch"; sourceTree = "<group>"; };
+		F6AA976E1937C7CC00D5AAE6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F6AA976F1937C7CC00D5AAE6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F6AA97721937C7CC00D5AAE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		F6AA97751937C7CC00D5AAE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		F6AA97771937C7CC00D5AAE6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F6AA97781937C7CC00D5AAE6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F6AA977F1937C7CC00D5AAE6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F6AA97851937C7CC00D5AAE6 /* New MomentumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "New MomentumTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6AA97861937C7CC00D5AAE6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F6AA978E1937C7CC00D5AAE6 /* New MomentumTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "New MomentumTests-Info.plist"; sourceTree = "<group>"; };
+		F6AA97901937C7CC00D5AAE6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F6AA97921937C7CC00D5AAE6 /* New_MomentumTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = New_MomentumTests.m; sourceTree = "<group>"; };
+		F6AA979C1937C82D00D5AAE6 /* InitialMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialMenu.h; sourceTree = "<group>"; };
+		F6AA979D1937C82D00D5AAE6 /* InitialMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialMenu.m; sourceTree = "<group>"; };
+		F6D44616199412BE003F2AEA /* gold sphere.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gold sphere.png"; sourceTree = "<group>"; };
+		F6D44619199412D7003F2AEA /* blue sphere.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue sphere.png"; sourceTree = "<group>"; };
+		F6D4461B1994131C003F2AEA /* MascarasColisao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MascarasColisao.h; sourceTree = "<group>"; };
+		F6D4461C19941461003F2AEA /* BallGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BallGenerator.h; sourceTree = "<group>"; };
+		F6D4461D19941461003F2AEA /* BallGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BallGenerator.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F6AA97571937C7CC00D5AAE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6AA97601937C7CC00D5AAE6 /* CoreGraphics.framework in Frameworks */,
+				F6AA97621937C7CC00D5AAE6 /* UIKit.framework in Frameworks */,
+				F6AA97641937C7CC00D5AAE6 /* SpriteKit.framework in Frameworks */,
+				F6AA975E1937C7CC00D5AAE6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6AA97821937C7CC00D5AAE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6AA97871937C7CC00D5AAE6 /* XCTest.framework in Frameworks */,
+				F6AA97891937C7CC00D5AAE6 /* UIKit.framework in Frameworks */,
+				F6AA97881937C7CC00D5AAE6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F6AA97511937C7CC00D5AAE6 = {
+			isa = PBXGroup;
+			children = (
+				F6AA97651937C7CC00D5AAE6 /* New Momentum */,
+				F6AA978C1937C7CC00D5AAE6 /* New MomentumTests */,
+				F6AA975C1937C7CC00D5AAE6 /* Frameworks */,
+				F6AA975B1937C7CC00D5AAE6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F6AA975B1937C7CC00D5AAE6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F6AA975A1937C7CC00D5AAE6 /* New Momentum.app */,
+				F6AA97851937C7CC00D5AAE6 /* New MomentumTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F6AA975C1937C7CC00D5AAE6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F6AA975D1937C7CC00D5AAE6 /* Foundation.framework */,
+				F6AA975F1937C7CC00D5AAE6 /* CoreGraphics.framework */,
+				F6AA97611937C7CC00D5AAE6 /* UIKit.framework */,
+				F6AA97631937C7CC00D5AAE6 /* SpriteKit.framework */,
+				F6AA97861937C7CC00D5AAE6 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F6AA97651937C7CC00D5AAE6 /* New Momentum */ = {
+			isa = PBXGroup;
+			children = (
+				F6AA976F1937C7CC00D5AAE6 /* AppDelegate.m */,
+				F6AA976E1937C7CC00D5AAE6 /* AppDelegate.h */,
+				F6AA97711937C7CC00D5AAE6 /* Main_iPhone.storyboard */,
+				F6AA97741937C7CC00D5AAE6 /* Main_iPad.storyboard */,
+				F6D4460919941249003F2AEA /* Classes */,
+				F6D4461419941265003F2AEA /* Imagens */,
+				F6AA97771937C7CC00D5AAE6 /* ViewController.h */,
+				F6AA97781937C7CC00D5AAE6 /* ViewController.m */,
+				F6D4461B1994131C003F2AEA /* MascarasColisao.h */,
+				F6AA979C1937C82D00D5AAE6 /* InitialMenu.h */,
+				F6AA979D1937C82D00D5AAE6 /* InitialMenu.m */,
+				F68B8C9F199557EC0042E014 /* Stage1.h */,
+				F68B8CA0199557EC0042E014 /* Stage1.m */,
+				F6AA977F1937C7CC00D5AAE6 /* Images.xcassets */,
+				F6AA97661937C7CC00D5AAE6 /* Supporting Files */,
+			);
+			path = "New Momentum";
+			sourceTree = "<group>";
+		};
+		F6AA97661937C7CC00D5AAE6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F6AA97671937C7CC00D5AAE6 /* New Momentum-Info.plist */,
+				F6AA97681937C7CC00D5AAE6 /* InfoPlist.strings */,
+				F6AA976B1937C7CC00D5AAE6 /* main.m */,
+				F6AA976D1937C7CC00D5AAE6 /* New Momentum-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F6AA978C1937C7CC00D5AAE6 /* New MomentumTests */ = {
+			isa = PBXGroup;
+			children = (
+				F6AA97921937C7CC00D5AAE6 /* New_MomentumTests.m */,
+				F6AA978D1937C7CC00D5AAE6 /* Supporting Files */,
+			);
+			path = "New MomentumTests";
+			sourceTree = "<group>";
+		};
+		F6AA978D1937C7CC00D5AAE6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F6AA978E1937C7CC00D5AAE6 /* New MomentumTests-Info.plist */,
+				F6AA978F1937C7CC00D5AAE6 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F6D4460919941249003F2AEA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F6D4461C19941461003F2AEA /* BallGenerator.h */,
+				F6D4461D19941461003F2AEA /* BallGenerator.m */,
+				F68B8C96199552230042E014 /* StageGeneric.h */,
+				F68B8C97199552230042E014 /* StageGeneric.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		F6D4461419941265003F2AEA /* Imagens */ = {
+			isa = PBXGroup;
+			children = (
+				F6D44619199412D7003F2AEA /* blue sphere.png */,
+				F6D44616199412BE003F2AEA /* gold sphere.png */,
+			);
+			path = Imagens;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F6AA97591937C7CC00D5AAE6 /* New Momentum */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6AA97961937C7CC00D5AAE6 /* Build configuration list for PBXNativeTarget "New Momentum" */;
+			buildPhases = (
+				F6AA97561937C7CC00D5AAE6 /* Sources */,
+				F6AA97571937C7CC00D5AAE6 /* Frameworks */,
+				F6AA97581937C7CC00D5AAE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "New Momentum";
+			productName = "New Momentum";
+			productReference = F6AA975A1937C7CC00D5AAE6 /* New Momentum.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F6AA97841937C7CC00D5AAE6 /* New MomentumTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6AA97991937C7CC00D5AAE6 /* Build configuration list for PBXNativeTarget "New MomentumTests" */;
+			buildPhases = (
+				F6AA97811937C7CC00D5AAE6 /* Sources */,
+				F6AA97821937C7CC00D5AAE6 /* Frameworks */,
+				F6AA97831937C7CC00D5AAE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F6AA978B1937C7CC00D5AAE6 /* PBXTargetDependency */,
+			);
+			name = "New MomentumTests";
+			productName = "New MomentumTests";
+			productReference = F6AA97851937C7CC00D5AAE6 /* New MomentumTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F6AA97521937C7CC00D5AAE6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Alessandro Camillo Gimenez de Menezes";
+				TargetAttributes = {
+					F6AA97841937C7CC00D5AAE6 = {
+						TestTargetID = F6AA97591937C7CC00D5AAE6;
+					};
+				};
+			};
+			buildConfigurationList = F6AA97551937C7CC00D5AAE6 /* Build configuration list for PBXProject "New Momentum" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F6AA97511937C7CC00D5AAE6;
+			productRefGroup = F6AA975B1937C7CC00D5AAE6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F6AA97591937C7CC00D5AAE6 /* New Momentum */,
+				F6AA97841937C7CC00D5AAE6 /* New MomentumTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F6AA97581937C7CC00D5AAE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6AA97801937C7CC00D5AAE6 /* Images.xcassets in Resources */,
+				F6AA97761937C7CC00D5AAE6 /* Main_iPad.storyboard in Resources */,
+				F6AA97731937C7CC00D5AAE6 /* Main_iPhone.storyboard in Resources */,
+				F6AA976A1937C7CC00D5AAE6 /* InfoPlist.strings in Resources */,
+				F6D44618199412BE003F2AEA /* gold sphere.png in Resources */,
+				F6D4461A199412D7003F2AEA /* blue sphere.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6AA97831937C7CC00D5AAE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6AA97911937C7CC00D5AAE6 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F6AA97561937C7CC00D5AAE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F68B8CA1199557EC0042E014 /* Stage1.m in Sources */,
+				F6D4461E19941461003F2AEA /* BallGenerator.m in Sources */,
+				F6AA97791937C7CC00D5AAE6 /* ViewController.m in Sources */,
+				F68B8C98199552230042E014 /* StageGeneric.m in Sources */,
+				F6AA97701937C7CC00D5AAE6 /* AppDelegate.m in Sources */,
+				F6AA976C1937C7CC00D5AAE6 /* main.m in Sources */,
+				F6AA979E1937C82D00D5AAE6 /* InitialMenu.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6AA97811937C7CC00D5AAE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6AA97931937C7CC00D5AAE6 /* New_MomentumTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F6AA978B1937C7CC00D5AAE6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F6AA97591937C7CC00D5AAE6 /* New Momentum */;
+			targetProxy = F6AA978A1937C7CC00D5AAE6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F6AA97681937C7CC00D5AAE6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6AA97691937C7CC00D5AAE6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F6AA97711937C7CC00D5AAE6 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6AA97721937C7CC00D5AAE6 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		F6AA97741937C7CC00D5AAE6 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6AA97751937C7CC00D5AAE6 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		F6AA978F1937C7CC00D5AAE6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6AA97901937C7CC00D5AAE6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F6AA97941937C7CC00D5AAE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F6AA97951937C7CC00D5AAE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F6AA97971937C7CC00D5AAE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "New Momentum/New Momentum-Prefix.pch";
+				INFOPLIST_FILE = "New Momentum/New Momentum-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F6AA97981937C7CC00D5AAE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "New Momentum/New Momentum-Prefix.pch";
+				INFOPLIST_FILE = "New Momentum/New Momentum-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		F6AA979A1937C7CC00D5AAE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/New Momentum.app/New Momentum";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "New Momentum/New Momentum-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "New MomentumTests/New MomentumTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		F6AA979B1937C7CC00D5AAE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/New Momentum.app/New Momentum";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "New Momentum/New Momentum-Prefix.pch";
+				INFOPLIST_FILE = "New MomentumTests/New MomentumTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F6AA97551937C7CC00D5AAE6 /* Build configuration list for PBXProject "New Momentum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6AA97941937C7CC00D5AAE6 /* Debug */,
+				F6AA97951937C7CC00D5AAE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6AA97961937C7CC00D5AAE6 /* Build configuration list for PBXNativeTarget "New Momentum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6AA97971937C7CC00D5AAE6 /* Debug */,
+				F6AA97981937C7CC00D5AAE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6AA97991937C7CC00D5AAE6 /* Build configuration list for PBXNativeTarget "New MomentumTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6AA979A1937C7CC00D5AAE6 /* Debug */,
+				F6AA979B1937C7CC00D5AAE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F6AA97521937C7CC00D5AAE6 /* Project object */;
+}
