@@ -12,6 +12,6 @@
 
 @interface BallGenerator : NSObject
 
-+(SKSpriteNode *)initWithtype:(int)type atPosition:(CGPoint)position;
++(SKSpriteNode *) createType:(int)type atPosition:(CGPoint)position;
 
 @end

@@ -8,10 +8,8 @@
 
 #import "StageGeneric.h"
 
-@interface Stage1 : StageGeneric  <SKPhysicsContactDelegate>
+@interface Stage1 : StageGeneric <SKPhysicsContactDelegate>
 
-@property SKSpriteNode *edgeBottom2;
-
-@property SKSpriteNode *spinner;
+@property SKSpriteNode *woodenBase;
 
 @end

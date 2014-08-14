@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F60DC16D199D55920061C196 /* Stage2.m in Sources */ = {isa = PBXBuildFile; fileRef = F60DC16C199D55920061C196 /* Stage2.m */; };
 		F68B8C98199552230042E014 /* StageGeneric.m in Sources */ = {isa = PBXBuildFile; fileRef = F68B8C97199552230042E014 /* StageGeneric.m */; };
 		F68B8CA1199557EC0042E014 /* Stage1.m in Sources */ = {isa = PBXBuildFile; fileRef = F68B8CA0199557EC0042E014 /* Stage1.m */; };
 		F6AA975E1937C7CC00D5AAE6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6AA975D1937C7CC00D5AAE6 /* Foundation.framework */; };
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F60DC16B199D55920061C196 /* Stage2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stage2.h; sourceTree = "<group>"; };
+		F60DC16C199D55920061C196 /* Stage2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stage2.m; sourceTree = "<group>"; };
 		F68B8C96199552230042E014 /* StageGeneric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StageGeneric.h; sourceTree = "<group>"; };
 		F68B8C97199552230042E014 /* StageGeneric.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StageGeneric.m; sourceTree = "<group>"; };
 		F68B8C9F199557EC0042E014 /* Stage1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stage1.h; sourceTree = "<group>"; };
@@ -148,6 +151,8 @@
 				F6AA979D1937C82D00D5AAE6 /* InitialMenu.m */,
 				F68B8C9F199557EC0042E014 /* Stage1.h */,
 				F68B8CA0199557EC0042E014 /* Stage1.m */,
+				F60DC16B199D55920061C196 /* Stage2.h */,
+				F60DC16C199D55920061C196 /* Stage2.m */,
 				F6AA977F1937C7CC00D5AAE6 /* Images.xcassets */,
 				F6AA97661937C7CC00D5AAE6 /* Supporting Files */,
 			);
@@ -304,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F68B8CA1199557EC0042E014 /* Stage1.m in Sources */,
+				F60DC16D199D55920061C196 /* Stage2.m in Sources */,
 				F6D4461E19941461003F2AEA /* BallGenerator.m in Sources */,
 				F6AA97791937C7CC00D5AAE6 /* ViewController.m in Sources */,
 				F68B8C98199552230042E014 /* StageGeneric.m in Sources */,

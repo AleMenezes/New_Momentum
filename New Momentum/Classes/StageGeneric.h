@@ -16,5 +16,7 @@
 @property SKSpriteNode *blueBall;
 
 -(id)initWithSize:(CGSize)size andType:(int)number;
+-(void)setEdgePropertiesTo: (SKSpriteNode*)node;
+-(void)setWoodNodePropertiesTo: (SKSpriteNode*)node;
 
 @end
