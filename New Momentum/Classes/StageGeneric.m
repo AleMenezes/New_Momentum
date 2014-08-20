@@ -12,7 +12,6 @@
 
 @implementation StageGeneric
 
-
 -(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
     }
@@ -62,7 +61,6 @@
             default:
                 break;
         }
-        
         
         [self addChild: self.edgeBottomLeft];
         [self addChild: self.edgeBottomRight];

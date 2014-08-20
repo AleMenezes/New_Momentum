@@ -24,7 +24,6 @@
         
         [self addChild: [self botao]];
         
-        
         SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
         myLabel.text = @"Hello, World!";
         myLabel.fontSize = 20;
