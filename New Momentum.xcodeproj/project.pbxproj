@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F60DC16D199D55920061C196 /* Stage2.m in Sources */ = {isa = PBXBuildFile; fileRef = F60DC16C199D55920061C196 /* Stage2.m */; };
+		F663070419A52E640089D60B /* ninja.png in Resources */ = {isa = PBXBuildFile; fileRef = F663070319A52E640089D60B /* ninja.png */; };
 		F68B8C98199552230042E014 /* StageGeneric.m in Sources */ = {isa = PBXBuildFile; fileRef = F68B8C97199552230042E014 /* StageGeneric.m */; };
 		F68B8CA1199557EC0042E014 /* Stage1.m in Sources */ = {isa = PBXBuildFile; fileRef = F68B8CA0199557EC0042E014 /* Stage1.m */; };
 		F6AA975E1937C7CC00D5AAE6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6AA975D1937C7CC00D5AAE6 /* Foundation.framework */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		F60DC16B199D55920061C196 /* Stage2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stage2.h; sourceTree = "<group>"; };
 		F60DC16C199D55920061C196 /* Stage2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stage2.m; sourceTree = "<group>"; };
+		F663070319A52E640089D60B /* ninja.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ninja.png; path = ../../../ninja.png; sourceTree = "<group>"; };
 		F68B8C96199552230042E014 /* StageGeneric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StageGeneric.h; sourceTree = "<group>"; };
 		F68B8C97199552230042E014 /* StageGeneric.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StageGeneric.m; sourceTree = "<group>"; };
 		F68B8C9F199557EC0042E014 /* Stage1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stage1.h; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 		F6D4461419941265003F2AEA /* Imagens */ = {
 			isa = PBXGroup;
 			children = (
+				F663070319A52E640089D60B /* ninja.png */,
 				F6D44619199412D7003F2AEA /* blue sphere.png */,
 				F6D44616199412BE003F2AEA /* gold sphere.png */,
 			);
@@ -286,6 +289,7 @@
 			files = (
 				F6AA97801937C7CC00D5AAE6 /* Images.xcassets in Resources */,
 				F6AA97761937C7CC00D5AAE6 /* Main_iPad.storyboard in Resources */,
+				F663070419A52E640089D60B /* ninja.png in Resources */,
 				F6AA97731937C7CC00D5AAE6 /* Main_iPhone.storyboard in Resources */,
 				F6AA976A1937C7CC00D5AAE6 /* InfoPlist.strings in Resources */,
 				F6D44618199412BE003F2AEA /* gold sphere.png in Resources */,

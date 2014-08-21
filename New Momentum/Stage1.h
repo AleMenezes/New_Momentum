@@ -11,5 +11,9 @@
 @interface Stage1 : StageGeneric <SKPhysicsContactDelegate>
 
 @property SKSpriteNode *woodenBase;
+@property SKSpriteNode *woodenBox;
+@property SKSpriteNode *plank;
+
+@property CGPoint pontoorigen;
 
 @end

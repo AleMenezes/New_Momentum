@@ -15,6 +15,8 @@
 @property SKSpriteNode *goldBall;
 @property SKSpriteNode *blueBall;
 
+@property SKSpriteNode *resetButtom;
+
 -(id)initWithSize:(CGSize)size andType:(int)number;
 -(void)setEdgePropertiesTo: (SKSpriteNode*)node;
 -(void)setWoodNodePropertiesTo: (SKSpriteNode*)node;

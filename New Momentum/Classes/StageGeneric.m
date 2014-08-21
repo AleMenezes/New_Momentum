@@ -26,10 +26,9 @@
         CGRect bodyRect = CGRectMake(0, -50, size.width, 50 + size.height);
         self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:bodyRect];
         [self setEdgePropertiesTo: self];
-        self.name = @"bodyRect";
+        //self.name = @"bodyRect";
         
         CGSize baseSize = CGSizeMake(size.width*2/5, 50);
-        
         self.edgeBottomLeft = [SKSpriteNode spriteNodeWithColor:[UIColor blackColor] size: baseSize];
         self.edgeBottomLeft.position = CGPointMake(self.edgeBottomLeft.size.width/2, self.edgeBottomLeft.size.height/2);
         self.edgeBottomLeft.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: baseSize];
@@ -40,10 +39,25 @@
         self.edgeBottomRight.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: baseSize];
         [self setEdgePropertiesTo: self.edgeBottomRight];
         
-        CGPoint centro = CGPointMake(size.width/2, size.height/2);
+        
+        CGSize buttomSize = CGSizeMake(75, 75);
+        [self setResetButtom: [SKSpriteNode spriteNodeWithColor: [UIColor redColor] size:buttomSize]];
+        [[self resetButtom] setSize: buttomSize];
+        [self resetButtom].position = CGPointMake(self.frame.size.width - buttomSize.width/2, self.frame.size.height - buttomSize.height/2);
+        
+        
+        SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+        myLabel.text = @"reset";
+        myLabel.fontSize = 15;
+        myLabel.position = CGPointMake(self.frame.size.width - buttomSize.width/2, self.frame.size.height - buttomSize.height/2);
+        
+        
+        
+        CGPoint ponto = CGPointMake(70, 345.5);
+        CGPoint centro = CGPointMake(324, 805);
         switch (number) {
             case 1:
-                [self setGoldBall: [BallGenerator createType:0 atPosition: centro]];
+                [self setGoldBall: [BallGenerator createType:0 atPosition: ponto]];
                 centro.y = centro.y + 50;
                 [self setBlueBall: [BallGenerator createType:1 atPosition: centro]];
                 break;
@@ -62,8 +76,12 @@
                 break;
         }
         
+        
         [self addChild: self.edgeBottomLeft];
         [self addChild: self.edgeBottomRight];
+        
+        [self addChild: [self resetButtom]];
+        [self addChild:myLabel];
         
         [self addChild: [self blueBall]];
         [self addChild: [self goldBall]];
@@ -84,8 +102,8 @@
 
 -(void)setWoodNodePropertiesTo: (SKSpriteNode*)node{
     node.physicsBody.categoryBitMask = woodMask;
-    node.physicsBody.contactTestBitMask = goldBallMask | blueBallMask | edgeMask;
-    node.physicsBody.collisionBitMask = goldBallMask | blueBallMask | edgeMask;
+    node.physicsBody.contactTestBitMask = goldBallMask | blueBallMask | edgeMask | woodMask;
+    node.physicsBody.collisionBitMask = goldBallMask | blueBallMask | edgeMask | woodMask;
     node.physicsBody.dynamic = YES;
     node.physicsBody.affectedByGravity = YES;
     node.physicsBody.allowsRotation = YES;
