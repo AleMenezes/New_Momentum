@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		F60DC16D199D55920061C196 /* Stage2.m in Sources */ = {isa = PBXBuildFile; fileRef = F60DC16C199D55920061C196 /* Stage2.m */; };
-		F663070419A52E640089D60B /* ninja.png in Resources */ = {isa = PBXBuildFile; fileRef = F663070319A52E640089D60B /* ninja.png */; };
+		F63A626619C0D1EB0047E8B8 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63A626519C0D1EB0047E8B8 /* FacebookSDK.framework */; };
+		F63A626919C0E78E0047E8B8 /* WebService.m in Sources */ = {isa = PBXBuildFile; fileRef = F63A626819C0E78E0047E8B8 /* WebService.m */; };
+		F63A626C19C0E89E0047E8B8 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F63A626A19C0E89E0047E8B8 /* Reachability.m */; };
 		F68B8C98199552230042E014 /* StageGeneric.m in Sources */ = {isa = PBXBuildFile; fileRef = F68B8C97199552230042E014 /* StageGeneric.m */; };
 		F68B8CA1199557EC0042E014 /* Stage1.m in Sources */ = {isa = PBXBuildFile; fileRef = F68B8CA0199557EC0042E014 /* Stage1.m */; };
 		F6AA975E1937C7CC00D5AAE6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6AA975D1937C7CC00D5AAE6 /* Foundation.framework */; };
@@ -46,7 +48,11 @@
 /* Begin PBXFileReference section */
 		F60DC16B199D55920061C196 /* Stage2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stage2.h; sourceTree = "<group>"; };
 		F60DC16C199D55920061C196 /* Stage2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stage2.m; sourceTree = "<group>"; };
-		F663070319A52E640089D60B /* ninja.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ninja.png; path = ../../../ninja.png; sourceTree = "<group>"; };
+		F63A626519C0D1EB0047E8B8 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		F63A626719C0E78E0047E8B8 /* WebService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebService.h; sourceTree = "<group>"; };
+		F63A626819C0E78E0047E8B8 /* WebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebService.m; sourceTree = "<group>"; };
+		F63A626A19C0E89E0047E8B8 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		F63A626B19C0E89E0047E8B8 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		F68B8C96199552230042E014 /* StageGeneric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StageGeneric.h; sourceTree = "<group>"; };
 		F68B8C97199552230042E014 /* StageGeneric.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StageGeneric.m; sourceTree = "<group>"; };
 		F68B8C9F199557EC0042E014 /* Stage1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stage1.h; sourceTree = "<group>"; };
@@ -87,6 +93,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6AA97601937C7CC00D5AAE6 /* CoreGraphics.framework in Frameworks */,
+				F63A626619C0D1EB0047E8B8 /* FacebookSDK.framework in Frameworks */,
 				F6AA97621937C7CC00D5AAE6 /* UIKit.framework in Frameworks */,
 				F6AA97641937C7CC00D5AAE6 /* SpriteKit.framework in Frameworks */,
 				F6AA975E1937C7CC00D5AAE6 /* Foundation.framework in Frameworks */,
@@ -128,6 +135,7 @@
 		F6AA975C1937C7CC00D5AAE6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F63A626519C0D1EB0047E8B8 /* FacebookSDK.framework */,
 				F6AA975D1937C7CC00D5AAE6 /* Foundation.framework */,
 				F6AA975F1937C7CC00D5AAE6 /* CoreGraphics.framework */,
 				F6AA97611937C7CC00D5AAE6 /* UIKit.framework */,
@@ -140,8 +148,8 @@
 		F6AA97651937C7CC00D5AAE6 /* New Momentum */ = {
 			isa = PBXGroup;
 			children = (
-				F6AA976F1937C7CC00D5AAE6 /* AppDelegate.m */,
 				F6AA976E1937C7CC00D5AAE6 /* AppDelegate.h */,
+				F6AA976F1937C7CC00D5AAE6 /* AppDelegate.m */,
 				F6AA97711937C7CC00D5AAE6 /* Main_iPhone.storyboard */,
 				F6AA97741937C7CC00D5AAE6 /* Main_iPad.storyboard */,
 				F6D4460919941249003F2AEA /* Classes */,
@@ -197,6 +205,10 @@
 				F6D4461D19941461003F2AEA /* BallGenerator.m */,
 				F68B8C96199552230042E014 /* StageGeneric.h */,
 				F68B8C97199552230042E014 /* StageGeneric.m */,
+				F63A626B19C0E89E0047E8B8 /* Reachability.h */,
+				F63A626A19C0E89E0047E8B8 /* Reachability.m */,
+				F63A626719C0E78E0047E8B8 /* WebService.h */,
+				F63A626819C0E78E0047E8B8 /* WebService.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -204,7 +216,6 @@
 		F6D4461419941265003F2AEA /* Imagens */ = {
 			isa = PBXGroup;
 			children = (
-				F663070319A52E640089D60B /* ninja.png */,
 				F6D44619199412D7003F2AEA /* blue sphere.png */,
 				F6D44616199412BE003F2AEA /* gold sphere.png */,
 			);
@@ -289,7 +300,6 @@
 			files = (
 				F6AA97801937C7CC00D5AAE6 /* Images.xcassets in Resources */,
 				F6AA97761937C7CC00D5AAE6 /* Main_iPad.storyboard in Resources */,
-				F663070419A52E640089D60B /* ninja.png in Resources */,
 				F6AA97731937C7CC00D5AAE6 /* Main_iPhone.storyboard in Resources */,
 				F6AA976A1937C7CC00D5AAE6 /* InfoPlist.strings in Resources */,
 				F6D44618199412BE003F2AEA /* gold sphere.png in Resources */,
@@ -312,9 +322,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F63A626919C0E78E0047E8B8 /* WebService.m in Sources */,
 				F68B8CA1199557EC0042E014 /* Stage1.m in Sources */,
 				F60DC16D199D55920061C196 /* Stage2.m in Sources */,
 				F6D4461E19941461003F2AEA /* BallGenerator.m in Sources */,
+				F63A626C19C0E89E0047E8B8 /* Reachability.m in Sources */,
 				F6AA97791937C7CC00D5AAE6 /* ViewController.m in Sources */,
 				F68B8C98199552230042E014 /* StageGeneric.m in Sources */,
 				F6AA97701937C7CC00D5AAE6 /* AppDelegate.m in Sources */,
@@ -454,6 +466,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/alessandrocamillogimenezdemenezes/Documents/FacebookSDK,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "New Momentum/New Momentum-Prefix.pch";
 				INFOPLIST_FILE = "New Momentum/New Momentum-Info.plist";
@@ -468,6 +484,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/alessandrocamillogimenezdemenezes/Documents/FacebookSDK,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "New Momentum/New Momentum-Prefix.pch";
 				INFOPLIST_FILE = "New Momentum/New Momentum-Info.plist";

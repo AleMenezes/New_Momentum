@@ -7,9 +7,14 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import <FacebookSDK/FacebookSDK.h>
 
-@interface InitialMenu : SKScene <SKPhysicsContactDelegate>
+@interface InitialMenu : SKScene <SKPhysicsContactDelegate, FBLoginViewDelegate>
 
 @property SKSpriteNode *botao;
+
+@property (strong, nonatomic) IBOutlet FBProfilePictureView *profilePictureView;
+@property (strong, nonatomic) IBOutlet UILabel *nameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *statusLabel;
 
 @end
