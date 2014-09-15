@@ -8,13 +8,20 @@
 
 #import <SpriteKit/SpriteKit.h>
 #import <FacebookSDK/FacebookSDK.h>
+#import "WebService.h"
+
 
 @interface InitialMenu : SKScene <SKPhysicsContactDelegate, FBLoginViewDelegate>
 
+@property NSUserDefaults *preferences;
+
 @property SKSpriteNode *botao;
 
-@property (strong, nonatomic) IBOutlet FBProfilePictureView *profilePictureView;
-@property (strong, nonatomic) IBOutlet UILabel *nameLabel;
-@property (strong, nonatomic) IBOutlet UILabel *statusLabel;
+@property FBLoginView *loginView;
+@property FBProfilePictureView *profilePictureView;
+@property NSString *userID;
+
+@property UILabel *nameLabel;
+@property UILabel *statusLabel;
 
 @end

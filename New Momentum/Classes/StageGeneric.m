@@ -20,6 +20,8 @@
 
 -(id)initWithSize:(CGSize)size andType:(int)number{
     if (self = [super initWithSize:size]) {
+        _preferences = [NSUserDefaults standardUserDefaults];
+        
         self.physicsWorld.contactDelegate = self; // makes collision detection possible
         self.physicsWorld.gravity = CGVectorMake(0, -9.98);
         

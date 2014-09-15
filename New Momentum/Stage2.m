@@ -64,15 +64,15 @@
 }
 
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
-    for (UITouch *touch in touches) {
-        CGPoint location = [touch locationInNode:self];
-    }
+//    for (UITouch *touch in touches) {
+//        CGPoint location = [touch locationInNode:self];
+//    }
 }
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
-    for (UITouch *touch in touches) {
-        CGPoint location = [touch locationInNode:self];
-    }
+//    for (UITouch *touch in touches) {
+//        CGPoint location = [touch locationInNode:self];
+//    }
 }
 
 -(void) didBeginContact:(SKPhysicsContact *)contact{

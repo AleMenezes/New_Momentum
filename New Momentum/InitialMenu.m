@@ -9,14 +9,16 @@
 #import "InitialMenu.h"
 #import "Stage1.h"
 
+
 @implementation InitialMenu
 
 -(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
-        self.physicsWorld.contactDelegate = self; // TORNA A COLISAO POSIVEL!!! TINHA ESQUECIDO ISSO >.<
+        _preferences = [NSUserDefaults standardUserDefaults];
         
+        self.physicsWorld.contactDelegate = self;  // makes collision detection possible
         self.backgroundColor = [SKColor colorWithRed:0.1 green:1.0 blue:0.1 alpha:1.0];
-        //[SKSpriteNode spriteNodeWithImageNamed:@"icone voltar.png"]
+
         [self setBotao : [SKSpriteNode spriteNodeWithColor: [UIColor redColor] size:CGSizeMake(150, 100)]];
         [[self botao] setSize: CGSizeMake(150, 100)];
         [self botao].position = CGPointMake(self.frame.size.width/2, self.frame.size.height/2);
@@ -32,15 +34,18 @@
     }
     return self;
 }
+
+    //[WebService requestPermission:@[@"user_games_activity", @"friends_games_activity", @"publish_actions"] forID: _userID];
+/**
+ *  method used to place regular UIkit elements that can't be placed on a SKScene directly
+ *
+ *  @param view its the SKScene
+ */
 -(void)didMoveToView:(SKView *)view{
-    //uielements
-    
-    FBLoginView *loginView = [[FBLoginView alloc] initWithReadPermissions: @[@"public_profile", @"user_friends", @"user_games_activity"]];
-    loginView.delegate = self;
-    
-    // Align the button in the center horizontally
-    loginView.frame = CGRectOffset(loginView.frame, (self.view.center.x - (loginView.frame.size.width / 2)), 5);
-    [self.view addSubview:loginView];
+    _loginView = [[FBLoginView alloc] initWithReadPermissions: @[@"public_profile", @"user_friends",@"user_games_activity", @"friends_games_activity", @"publish_actions", @"user_events"]];
+    _loginView.delegate = self;
+    _loginView.frame = CGRectOffset(_loginView.frame, (self.view.center.x - (_loginView.frame.size.width / 2)), 5);
+    [self.view addSubview:_loginView];
     
     _statusLabel = [[UILabel alloc] init];
     _statusLabel.frame = CGRectMake(30, 50, self.view.frame.size.width, 30);
@@ -53,12 +58,23 @@
     _nameLabel = [[UILabel alloc] init];
     _nameLabel.frame = CGRectMake(30, 140, self.view.frame.size.width, 30);
     [self.view addSubview: _nameLabel];
+    
+    UIButton * face = [[UIButton alloc] initWithFrame:CGRectMake(self.view.center.x*1.75, self.view.center.y, 100, 100)];
+    [face addTarget:self action:@selector(botaozin) forControlEvents:UIControlEventTouchDown];
+    [face setBackgroundImage: [UIImage imageNamed:@"icone voltar.png"] forState: UIControlStateNormal];
+    
+    [self.view addSubview: face];
 }
 
-
+-(void)botaozin{
+    if ([WebService pegaAchievementsNoFace:self.userID]) {
+        NSLog(@"jfuncionaaa woo");
+    }
+}
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-//    for (UITouch *touch in touches) {
+
+ //    for (UITouch *touch in touches) {
 //        CGPoint location = [touch locationInNode:self];
 //        if (CGRectContainsPoint([self botao].frame, location)) {
 //        }
@@ -99,12 +115,15 @@
     /* Called before each frame is rendered */
 }
 
+
+
 //-// Facebook login delegate methods //-//
 // This method will be called when the user information has been fetched from facebook
 - (void)loginViewFetchedUserInfo:(FBLoginView *)loginView
                             user:(id<FBGraphUser>)user {
     self.profilePictureView.profileID = user.id;
     self.nameLabel.text = user.name;
+    [self setUserID: user.id];
 }
 // Logged-in from facebook user experience
 - (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView {

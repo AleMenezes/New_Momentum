@@ -7,11 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <FacebookSDK/FacebookSDK.h>
 
 @interface WebService : NSObject
 
 extern NSString *usuarioUniversal;
 
 +(BOOL)check;
+
+//testing
++(BOOL)carregarPontosUsuario: (NSString *)userID;
++(BOOL)getFacebookAchievements: (NSString *)userID;
++(BOOL)postFacebookAchievement: (NSString *)userID;
+
++(void)requestPermission:(NSArray*)permissionsNeeded forID:(NSString *)userID;
++(void)makeRequestForUserData;
 
 @end

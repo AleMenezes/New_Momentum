@@ -66,6 +66,8 @@
     return self;
 }
 
+
+
 //-(void)addNinja{
 //    CGSize woodBaseSize = CGSizeMake(100, 100);
 //    SKSpriteNode * ninja = [[SKSpriteNode alloc] initWithImageNamed:@"ninja.png"];

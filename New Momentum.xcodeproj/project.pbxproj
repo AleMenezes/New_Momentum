@@ -11,6 +11,7 @@
 		F63A626619C0D1EB0047E8B8 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63A626519C0D1EB0047E8B8 /* FacebookSDK.framework */; };
 		F63A626919C0E78E0047E8B8 /* WebService.m in Sources */ = {isa = PBXBuildFile; fileRef = F63A626819C0E78E0047E8B8 /* WebService.m */; };
 		F63A626C19C0E89E0047E8B8 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F63A626A19C0E89E0047E8B8 /* Reachability.m */; };
+		F67ED4A419C75A0700B266BD /* icone voltar.png in Resources */ = {isa = PBXBuildFile; fileRef = F67ED4A319C75A0700B266BD /* icone voltar.png */; };
 		F68B8C98199552230042E014 /* StageGeneric.m in Sources */ = {isa = PBXBuildFile; fileRef = F68B8C97199552230042E014 /* StageGeneric.m */; };
 		F68B8CA1199557EC0042E014 /* Stage1.m in Sources */ = {isa = PBXBuildFile; fileRef = F68B8CA0199557EC0042E014 /* Stage1.m */; };
 		F6AA975E1937C7CC00D5AAE6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6AA975D1937C7CC00D5AAE6 /* Foundation.framework */; };
@@ -53,6 +54,7 @@
 		F63A626819C0E78E0047E8B8 /* WebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebService.m; sourceTree = "<group>"; };
 		F63A626A19C0E89E0047E8B8 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		F63A626B19C0E89E0047E8B8 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		F67ED4A319C75A0700B266BD /* icone voltar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icone voltar.png"; sourceTree = "<group>"; };
 		F68B8C96199552230042E014 /* StageGeneric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StageGeneric.h; sourceTree = "<group>"; };
 		F68B8C97199552230042E014 /* StageGeneric.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StageGeneric.m; sourceTree = "<group>"; };
 		F68B8C9F199557EC0042E014 /* Stage1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stage1.h; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 		F6D4461419941265003F2AEA /* Imagens */ = {
 			isa = PBXGroup;
 			children = (
+				F67ED4A319C75A0700B266BD /* icone voltar.png */,
 				F6D44619199412D7003F2AEA /* blue sphere.png */,
 				F6D44616199412BE003F2AEA /* gold sphere.png */,
 			);
@@ -299,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6AA97801937C7CC00D5AAE6 /* Images.xcassets in Resources */,
+				F67ED4A419C75A0700B266BD /* icone voltar.png in Resources */,
 				F6AA97761937C7CC00D5AAE6 /* Main_iPad.storyboard in Resources */,
 				F6AA97731937C7CC00D5AAE6 /* Main_iPhone.storyboard in Resources */,
 				F6AA976A1937C7CC00D5AAE6 /* InfoPlist.strings in Resources */,

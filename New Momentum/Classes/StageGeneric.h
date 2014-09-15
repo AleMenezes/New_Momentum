@@ -10,6 +10,8 @@
 
 @interface StageGeneric : SKScene  <SKPhysicsContactDelegate>
 
+@property NSUserDefaults *preferences;
+
 @property SKSpriteNode *edgeBottomLeft;
 @property SKSpriteNode *edgeBottomRight;
 @property SKSpriteNode *goldBall;
