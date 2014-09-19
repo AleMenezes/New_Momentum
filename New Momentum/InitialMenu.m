@@ -7,8 +7,6 @@
 //
 
 #import "InitialMenu.h"
-#import "Stage1.h"
-
 
 @implementation InitialMenu
 
@@ -59,22 +57,43 @@
     _nameLabel.frame = CGRectMake(30, 140, self.view.frame.size.width, 30);
     [self.view addSubview: _nameLabel];
     
-    UIButton * face = [[UIButton alloc] initWithFrame:CGRectMake(self.view.center.x*1.75, self.view.center.y, 100, 100)];
-    [face addTarget:self action:@selector(botaozin) forControlEvents:UIControlEventTouchDown];
-    [face setBackgroundImage: [UIImage imageNamed:@"icone voltar.png"] forState: UIControlStateNormal];
+    _face = [[UIButton alloc] initWithFrame:CGRectMake(self.view.center.x*0.25 -50, self.view.center.y, 100, 100)];
+    [_face addTarget:self action:@selector(botaozin) forControlEvents:UIControlEventTouchDown];
+    [_face setBackgroundImage: [UIImage imageNamed:@"icone voltar.png"] forState: UIControlStateNormal];
+    [self.view addSubview: _face];
     
-    [self.view addSubview: face];
+    _face2 = [[UIButton alloc] initWithFrame:CGRectMake(self.view.center.x*1.75 -50, self.view.center.y, 100, 100)];
+    [_face2 addTarget:self action:@selector(botaozin2) forControlEvents:UIControlEventTouchDown];
+    [_face2 setBackgroundImage: [UIImage imageNamed:@"icone voltar.png"] forState: UIControlStateNormal];
+    [self.view addSubview: _face2];
+}
+
+-(void)willMoveFromView:(SKView *)view{
+    
+}
+
+-(void)hideUIElements{
+    _loginView.hidden = YES;
+    _profilePictureView.hidden = YES;
+    
+    _nameLabel.hidden = YES;
+    _statusLabel.hidden = YES;
 }
 
 -(void)botaozin{
-    if ([WebService pegaAchievementsNoFace:self.userID]) {
-        NSLog(@"jfuncionaaa woo");
+    if ([WebService teste]) {
+        [WebService getScore];
+        NSLog(@"funfa");
+    }
+}
+-(void)botaozin2{
+    if ([WebService teste2]) {
+        NSLog(@"funfa2");
     }
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-
- //    for (UITouch *touch in touches) {
+//    for (UITouch *touch in touches) {
 //        CGPoint location = [touch locationInNode:self];
 //        if (CGRectContainsPoint([self botao].frame, location)) {
 //        }
@@ -91,9 +110,11 @@
     for (UITouch *touch in touches) {
         CGPoint location = [touch locationInNode:self];
         if (CGRectContainsPoint([self botao].frame, location)) {
-            Stage1 * stage = [[Stage1 alloc] initWithSize:self.view.bounds.size];
+            [self hideUIElements];
+            Stage1* stage = [[Stage1 alloc] initWithSize:self.view.bounds.size];
             stage.scaleMode = SKSceneScaleModeAspectFill;
-            [self.view presentScene:stage transition:[SKTransition doorsOpenHorizontalWithDuration:0.7] ];
+            [self.view presentScene: stage transition:[SKTransition doorsOpenHorizontalWithDuration:0.7] ];
+            //[self removeFromParent];
         }
     }
 }
@@ -115,6 +136,9 @@
     /* Called before each frame is rendered */
 }
 
+- (BOOL)shouldAutorotate{
+    return NO;
+}
 
 
 //-// Facebook login delegate methods //-//

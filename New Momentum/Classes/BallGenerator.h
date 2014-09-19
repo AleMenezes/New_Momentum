@@ -14,4 +14,6 @@
 
 +(SKSpriteNode *) createType:(int)type atPosition:(CGPoint)position;
 
++(SKSpriteNode *) createType:(int)type;
+
 @end

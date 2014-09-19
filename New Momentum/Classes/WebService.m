@@ -62,6 +62,115 @@
     return NO;
 }
 
++(BOOL)testedefault{
+    if ([self check]){
+        
+        return YES;
+    }
+    return NO;
+}
+
+
++(BOOL)teste{
+    if ([self check]){
+        NSMutableDictionary<FBGraphObject> *action = [FBGraphObject graphObject];
+        action[@"metal"] = @"http://samples.ogp.me/719481568100795";
+        
+        [FBRequestConnection startForPostWithGraphPath:@"me/new_momentum:recycle"
+                                           graphObject:action
+                                     completionHandler:^(FBRequestConnection *connection,
+                                                         id result,
+                                                         NSError *error) {
+                                         // handle the result
+                                         NSLog(@"%@",result);
+                                     }];
+        return YES;
+    }
+    return NO;
+}
+
++(BOOL)teste2{
+    if ([self check]){
+        [FBRequestConnection startWithGraphPath:@"me/new_momentum:recycle"
+                              completionHandler:^(FBRequestConnection *connection,
+                                                  id result,
+                                                  NSError *error) {
+                                  // handle the result
+                                  NSLog(@"%@",result);
+                              }];
+        return YES;
+    }
+    return NO;
+}
+
++(BOOL)getScore{
+    if ([self check]){
+        /* make the API call */
+        [FBRequestConnection startWithGraphPath:@"/me/scores"
+                                     parameters:nil
+                                     HTTPMethod:@"GET"
+                              completionHandler:^(
+                                                  FBRequestConnection *connection,
+                                                  id result,
+                                                  NSError *error
+                                                  ) {
+                                  /* handle the result */
+                                  NSLog(@"%@",result);
+                              }];
+        return YES;
+    }
+    return NO;
+}
+
++(BOOL)setScore{
+    if ([self check]){
+        /* make the API call */
+        NSString *string = [NSString stringWithFormat:@"%d", arc4random()%10000];
+        
+        NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
+                                string, @"score",
+                                nil
+                                ];
+        /* make the API call */
+        [FBRequestConnection startWithGraphPath:@"/me/scores"
+                                     parameters:params
+                                     HTTPMethod:@"POST"
+                              completionHandler:^(
+                                                  FBRequestConnection *connection,
+                                                  id result,
+                                                  NSError *error
+                                                  ) {
+                                  /* handle the result */
+                                  NSLog(@"%@",result);
+                              }];
+        return YES;
+    }
+    return NO;
+}
+
+#pragma mark Facebook related methods
+//      graphs api testing        //
+
++(BOOL)getInfoUser: (NSString *)userID{ 
+    if ([self check]){
+        /* make the API call */
+        [FBRequestConnection startWithGraphPath:@"/me"
+                                     parameters:nil
+                                     HTTPMethod:@"GET"
+                              completionHandler:^(
+                                                  FBRequestConnection *connection,
+                                                  id result,
+                                                  NSError *error
+                                                  ) {
+                                  /* handle the result */
+                                  //NSLog(@"%@",result);
+                              }];
+        return YES;
+    }
+    return NO;
+}
+
+
 /**
  *  for learning, not a priority
  *
@@ -80,7 +189,7 @@
                                                   NSError *error
                                                   ) {
                                   /* handle the result */
-                                  NSLog(@"%@",result);
+                                  //NSLog(@"%@",result);
                               }];
         return YES;
     }

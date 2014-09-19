@@ -14,9 +14,17 @@
 extern NSString *usuarioUniversal;
 
 +(BOOL)check;
++(BOOL)carregarPontosUsuario: (NSString *)userID;
 
 //testing
-+(BOOL)carregarPontosUsuario: (NSString *)userID;
++(BOOL)teste;
++(BOOL)teste2;
+
+//-// Facebook related methods //-//
++(BOOL)getScore;
++(BOOL)setScore;
+
++(BOOL)getInfoUser: (NSString *)userID;
 +(BOOL)getFacebookAchievements: (NSString *)userID;
 +(BOOL)postFacebookAchievement: (NSString *)userID;
 

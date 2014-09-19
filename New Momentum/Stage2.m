@@ -39,6 +39,7 @@
     [self performSelector:@selector(spinnerAction) withObject:nil afterDelay:0.4];
 }
 
+#pragma mark touch events
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     for (UITouch *touch in touches) {
         CGPoint location = [touch locationInNode:self];
@@ -75,6 +76,8 @@
 //    }
 }
 
+#pragma mark collision related methods
+
 -(void) didBeginContact:(SKPhysicsContact *)contact{
     SKPhysicsBody *firstBody, *secondBody;
     
@@ -89,6 +92,7 @@
     NSLog(@"oi");
 }
 
+#pragma mark Main Game Loop
 
 
 @end

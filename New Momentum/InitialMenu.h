@@ -9,6 +9,7 @@
 #import <SpriteKit/SpriteKit.h>
 #import <FacebookSDK/FacebookSDK.h>
 #import "WebService.h"
+#import "Stage1.h"
 
 
 @interface InitialMenu : SKScene <SKPhysicsContactDelegate, FBLoginViewDelegate>
@@ -16,6 +17,10 @@
 @property NSUserDefaults *preferences;
 
 @property SKSpriteNode *botao;
+
+
+@property UIButton * face;
+@property UIButton * face2;
 
 @property FBLoginView *loginView;
 @property FBProfilePictureView *profilePictureView;

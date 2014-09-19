@@ -16,57 +16,19 @@
     if (self) {
         self.backgroundColor = [SKColor colorWithRed:1.0 green:0.5 blue:0.1 alpha:1];
    
-        [self.edgeBottomLeft removeFromParent]; //for this stage they dont have the right properties
-        self.edgeBottomLeft = nil;              // so we remote it and reset them
-        [self.edgeBottomRight removeFromParent];
-        self.edgeBottomRight = nil;
+        [self buildStage:size];
         
-        CGSize halfscreen = CGSizeMake(size.width/2, 50);//visually understanable
-        self.edgeBottomLeft = [SKSpriteNode spriteNodeWithColor:[UIColor blackColor] size: halfscreen];
-        self.edgeBottomLeft.position = CGPointMake(self.edgeBottomLeft.size.width/2, self.edgeBottomLeft.size.height/2);
-        self.edgeBottomLeft.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: halfscreen];
-        [self setEdgePropertiesTo: self.edgeBottomLeft];
-        
-        self.edgeBottomRight = [SKSpriteNode spriteNodeWithColor:[UIColor blackColor] size: halfscreen];
-        self.edgeBottomRight.position = CGPointMake(size.width - self.edgeBottomRight.size.width/2, self.edgeBottomRight.size.height/2);
-        self.edgeBottomRight.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: halfscreen];
-        [self setEdgePropertiesTo: self.edgeBottomRight];
-        
-        CGSize woodBaseSize = CGSizeMake(size.width*4/10, 20); //visually understanable
-        self.woodenBase = [SKSpriteNode spriteNodeWithColor:[UIColor blackColor] size: woodBaseSize];
-        self.woodenBase.position = CGPointMake(size.width - self.woodenBase.size.width/2, size.height*7/10);
-        self.woodenBase.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:woodBaseSize];
-        [self setWoodNodePropertiesTo: self.woodenBase];
-        self.woodenBase.physicsBody.dynamic = NO;
-        
-        CGFloat woodWidth = size.width/3;
-        CGSize woodBoxSize = CGSizeMake(woodWidth, size.height/4);
-        
-        self.woodenBox = [SKSpriteNode spriteNodeWithColor:[UIColor blackColor] size: woodBoxSize];
-        self.woodenBox.position = CGPointMake(self.woodenBox.size.width/2, self.woodenBox.size.height/2 + self.edgeBottomLeft.size.height);
-        self.woodenBox.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: woodBoxSize];
-        [self setEdgePropertiesTo: self.woodenBox];
- 
-        woodWidth = woodWidth*2 - 100;
-        CGSize plankSize = CGSizeMake(woodWidth, 25);
-        self.plank = [SKSpriteNode spriteNodeWithColor:[UIColor blackColor] size: plankSize];
-        self.plank.position =  CGPointMake(self.plank.size.width/2,
-                                           self.plank.size.height/2 + self.woodenBox.size.height + self.edgeBottomLeft.size.height);
-        self.plank.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: plankSize];
-        [self setWoodNodePropertiesTo: self.plank];
-        
-        [self addChild: self.edgeBottomLeft];
-        [self addChild: self.edgeBottomRight];
-        
-        [self addChild: self.woodenBase];
-        [self addChild: self.woodenBox];
-        [self addChild: self.plank];
-
     }
     return self;
 }
 
+-(void)didMoveToView:(SKView *)view{
+    [super didMoveToView:view];
+}
 
+-(void)willMoveFromView:(SKView *)view{
+    [super willMoveFromView:view];
+}
 
 //-(void)addNinja{
 //    CGSize woodBaseSize = CGSizeMake(100, 100);
@@ -80,6 +42,91 @@
 //
 //    [self addChild: ninja];
 //    [self performSelector:@selector(addNinja) withObject:nil afterDelay:1];
+//}
+
+-(void)buildStage:(CGSize)size{
+    [super buildStage:size];
+    
+    [self.edgeBottomLeft removeFromParent]; //for this stage they dont have the right properties
+    self.edgeBottomLeft = nil;              // so we remote it and reset them
+    [self.edgeBottomRight removeFromParent];
+    self.edgeBottomRight = nil;
+    
+    //edge bottom
+    CGSize halfscreen = CGSizeMake(size.width/2, 50);//visually understanable
+    self.edgeBottomLeft = [SKSpriteNode spriteNodeWithColor:[UIColor blackColor] size: halfscreen];
+    self.edgeBottomLeft.position = CGPointMake(self.edgeBottomLeft.size.width/2, self.edgeBottomLeft.size.height/2);
+    self.edgeBottomLeft.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: halfscreen];
+    [self setEdgePropertiesTo: self.edgeBottomLeft];
+    
+    self.edgeBottomRight = [SKSpriteNode spriteNodeWithColor:[UIColor blackColor] size: halfscreen];
+    self.edgeBottomRight.position = CGPointMake(size.width - self.edgeBottomRight.size.width/2, self.edgeBottomRight.size.height/2);
+    self.edgeBottomRight.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: halfscreen];
+    [self setEdgePropertiesTo: self.edgeBottomRight];
+    
+    //balls - move them to their position
+    self.goldBall.physicsBody.velocity = CGVectorMake(0, 0);
+    [self.goldBall setPosition: CGPointMake(70, 345.5)];
+//    [self.goldBall runAction: [SKAction rotateToAngle:0 duration:0.01]];
+//    [self.goldBall runAction: [SKAction moveTo: CGPointMake(70, 345.5) duration:0.01]];
+
+    self.blueBall.physicsBody.velocity = CGVectorMake(0, 0);
+    [self.blueBall setPosition: CGPointMake(324, 805)];
+//    [self.blueBall runAction: [SKAction rotateToAngle:0 duration:0.01]];
+//    [self.blueBall runAction: [SKAction moveTo: CGPointMake(324, 805) duration:0.01]];
+  
+    //making the extra elements of the stage
+    CGSize woodBaseSize = CGSizeMake(size.width*4/10, 20); //visually understanable
+    self.woodenBase = [SKSpriteNode spriteNodeWithColor:[UIColor blackColor] size: woodBaseSize];
+    self.woodenBase.position = CGPointMake(size.width - self.woodenBase.size.width/2, size.height*7/10);
+    self.woodenBase.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:woodBaseSize];
+    [self setWoodNodePropertiesTo: self.woodenBase];
+    self.woodenBase.physicsBody.dynamic = NO;
+    
+    CGFloat woodWidth = size.width/3;
+    CGSize woodBoxSize = CGSizeMake(woodWidth, size.height/4);
+    
+    self.woodenBox = [SKSpriteNode spriteNodeWithColor:[UIColor blackColor] size: woodBoxSize];
+    self.woodenBox.position = CGPointMake(self.woodenBox.size.width/2, self.woodenBox.size.height/2 + self.edgeBottomLeft.size.height);
+    self.woodenBox.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: woodBoxSize];
+    [self setEdgePropertiesTo: self.woodenBox];
+    
+    woodWidth = woodWidth*2 - 100;
+    CGSize plankSize = CGSizeMake(woodWidth, 25);
+    self.plank = [SKSpriteNode spriteNodeWithColor:[UIColor blackColor] size: plankSize];
+    self.plank.position =  CGPointMake(self.plank.size.width/2,
+                                       self.plank.size.height/2 + self.woodenBox.size.height + self.edgeBottomLeft.size.height);
+    self.plank.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: plankSize];
+    [self setWoodNodePropertiesTo: self.plank];
+
+    
+    //put all them on the screen now
+    [self addChild: self.edgeBottomLeft];
+    [self addChild: self.edgeBottomRight];
+    
+    [self addChild: [self blueBall]];
+    [self addChild: [self goldBall]];
+    
+    [self addChild: self.woodenBase];
+    [self addChild: self.woodenBox];
+    [self addChild: self.plank];
+}
+
+-(void)cleanStage{
+    [super cleanStage];
+    
+    [self.woodenBase removeFromParent];
+    self.woodenBase = nil;
+    
+    [self.woodenBox removeFromParent];
+    self.woodenBox= nil;
+    
+    [self.plank removeFromParent];
+    self.plank = nil;
+}
+
+//-(void)resetStage{
+//    [super resetStage];
 //}
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -96,11 +143,11 @@
         if (CGRectContainsPoint([self blueBall].frame, location)) {
             [[self blueBall] runAction: gira];
         }
-
+        
         if (CGRectContainsPoint([self edgeBottomRight].frame, location)) {
             [[self edgeBottomRight] runAction: gira];
         }
-
+        
         if (CGRectContainsPoint([self resetButtom].frame, location)) {
             [self resetStage];
         }
@@ -118,38 +165,6 @@
             [self addChild: node];
         }
     }
-}
-
-
--(void)resetStage{
-    self.goldBall.physicsBody.dynamic = NO;
-    [self.goldBall removeAllActions];
-    self.goldBall.physicsBody.velocity = CGVectorMake(0, 0);
-    [self.goldBall runAction: [SKAction rotateToAngle:0 duration:0.01]];
-    [self.goldBall runAction: [SKAction moveTo: CGPointMake(70, 345.5) duration:0.01]];
-    self.goldBall.physicsBody.dynamic = YES;
-    
-    self.blueBall.physicsBody.dynamic = NO;
-    [self.blueBall removeAllActions];
-    self.blueBall.physicsBody.velocity = CGVectorMake(0, 0);
-    [self.blueBall runAction: [SKAction rotateToAngle:0 duration:0.01]];
-    [self.blueBall runAction: [SKAction moveTo: CGPointMake(324, 805) duration:0.01]];
-    self.blueBall.physicsBody.dynamic = YES;
-    
-    self.woodenBox.physicsBody.dynamic = NO;
-    [self.woodenBox removeAllActions];
-    self.woodenBox.physicsBody.velocity = CGVectorMake(0, 0);
-    [self.woodenBox runAction: [SKAction rotateToAngle:0 duration:0.01]];
-    [self.woodenBox runAction: [SKAction moveTo:CGPointMake(self.woodenBox.size.width/2, self.woodenBox.size.height/2 + self.edgeBottomLeft.size.height) duration:0.01]];
-    self.woodenBox.physicsBody.dynamic = YES;
-    
-    self.plank.physicsBody.dynamic = NO;
-    [self.plank removeAllActions];
-    self.plank.physicsBody.velocity = CGVectorMake(0, 0);
-    [self.plank runAction: [SKAction rotateToAngle:0 duration:0.01]];
-    [self.plank runAction: [SKAction moveTo:CGPointMake(self.plank.size.width/2,
-                                                        self.plank.size.height/2 + self.woodenBox.size.height + self.edgeBottomLeft.size.height) duration: 0.01]];
-    self.plank.physicsBody.dynamic = YES;
 }
 
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
