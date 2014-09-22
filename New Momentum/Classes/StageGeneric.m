@@ -9,7 +9,7 @@
 #import "StageGeneric.h"
 #import "MascarasColisao.h"
 #import "BallGenerator.h"
-
+#import "InitialMenu.h"
 
 @implementation StageGeneric
 
@@ -33,15 +33,7 @@
         [self setEdgePropertiesTo: self];
         //self.name = @"bodyRect";
         
-        CGSize buttomSize = CGSizeMake(75, 75);
-        [self setResetButtom: [SKSpriteNode spriteNodeWithColor: [UIColor redColor] size:buttomSize]];
-        [[self resetButtom] setSize: buttomSize];
-        [self resetButtom].position = CGPointMake(self.frame.size.width - buttomSize.width/2, self.frame.size.height - buttomSize.height/2);
-        
-        [self addChild: [self resetButtom]];
-        
         //[self buildStage:size];
-    
     }
     return self;
 }
@@ -80,33 +72,10 @@
     [self setGoldBall: [BallGenerator createType:0]]; //each stage should place the balls at their own initial place
     [self setBlueBall: [BallGenerator createType:1]];
     
-//    CGPoint ponto = CGPointMake(70, 345.5);
-//    CGPoint centro = CGPointMake(324, 805);
-//    switch ([self stageType]) {
-//        case 1:
-//            [self setGoldBall: [BallGenerator createType:0 atPosition: ponto]];
-//            centro.y = centro.y + 50;
-//            [self setBlueBall: [BallGenerator createType:1 atPosition: centro]];
-//            break;
-//        case 2:
-//            [self setGoldBall: [BallGenerator createType:0 atPosition: centro]];
-//            centro.x = centro.x + 200;
-//            centro.y = centro.y + 100;
-//            [self setBlueBall: [BallGenerator createType:1 atPosition: centro]];
-//            break;
-//        case 3:
-//            break;
-//        case 4:
-//            break;
-//            
-//        default:
-//            break;
-//    }
-    
     [self addChild: self.edgeBottomLeft];
     [self addChild: self.edgeBottomRight];
     
-//    [self addChild: [self blueBall]];
+//    [self addChild: [self blueBall]]; //the stage should place them after setting their position
 //    [self addChild: [self goldBall]];
 }
 
@@ -130,11 +99,13 @@
 }
 
 -(void)backToMenu{
-//    _menu = [[InitialMenu alloc] initWithSize:self.view.bounds.size];
-//    _menu.scaleMode = SKSceneScaleModeAspectFill;
-//    [self.view presentScene: _menu transition:[SKTransition doorsCloseHorizontalWithDuration:0.7] ];
+    [self cleanStage];
     [self removeAllChildren];
     [self removeFromParent];
+    InitialMenu* menu = [[InitialMenu alloc] initWithSize:self.view.bounds.size];
+    menu.scaleMode = SKSceneScaleModeAspectFill;
+    [self.view presentScene: menu transition:[SKTransition doorsCloseHorizontalWithDuration:0.7] ];
+
 }
 
 -(void)setEdgePropertiesTo: (SKSpriteNode*)node{
@@ -164,17 +135,11 @@
 //        CGPoint location = [touch locationInNode:self];
 //    }
 }
-
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
-//    for (UITouch *touch in touches) {
-//        CGPoint location = [touch locationInNode:self];
-//    }
+
 }
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
-//    for (UITouch *touch in touches) {
-//        CGPoint location = [touch locationInNode:self];
-//    }
 }
 
 -(void) didBeginContact:(SKPhysicsContact *)contact{

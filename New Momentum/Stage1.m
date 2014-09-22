@@ -144,13 +144,14 @@
             [[self blueBall] runAction: gira];
         }
         
+        
+        if (CGRectContainsPoint([self edgeBottomLeft].frame, location)) {
+            [[self edgeBottomLeft] runAction: gira];
+        }
         if (CGRectContainsPoint([self edgeBottomRight].frame, location)) {
             [[self edgeBottomRight] runAction: gira];
         }
         
-        if (CGRectContainsPoint([self resetButtom].frame, location)) {
-            [self resetStage];
-        }
         else{
             [[self blueBall] removeAllActions];
             self.blueBall.physicsBody.velocity = CGVectorMake(0, 0);

@@ -18,7 +18,6 @@
 
 @property SKSpriteNode *botao;
 
-
 @property UIButton * face;
 @property UIButton * face2;
 

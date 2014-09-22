@@ -78,6 +78,9 @@
     
     _nameLabel.hidden = YES;
     _statusLabel.hidden = YES;
+    
+    _face.hidden = YES;
+    _face2.hidden = YES;
 }
 
 -(void)botaozin{

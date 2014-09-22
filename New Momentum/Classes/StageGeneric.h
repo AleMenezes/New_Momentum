@@ -19,7 +19,7 @@
 @property SKSpriteNode *edgeBottomRight;
 @property SKSpriteNode *goldBall;
 @property SKSpriteNode *blueBall;
-@property SKSpriteNode *resetButtom;
+@property SKSpriteNode *target;
 
 @property UIButton *reset;
 @property UIButton *returnToMenu;

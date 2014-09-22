@@ -14,6 +14,4 @@
 @property SKSpriteNode *woodenBox;
 @property SKSpriteNode *plank;
 
-@property CGPoint pontoorigen;
-
 @end
