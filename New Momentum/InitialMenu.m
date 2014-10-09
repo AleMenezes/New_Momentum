@@ -57,15 +57,15 @@
     _nameLabel.frame = CGRectMake(30, 140, self.view.frame.size.width, 30);
     [self.view addSubview: _nameLabel];
     
-    _face = [[UIButton alloc] initWithFrame:CGRectMake(self.view.center.x*0.25 -50, self.view.center.y, 100, 100)];
-    [_face addTarget:self action:@selector(botaozin) forControlEvents:UIControlEventTouchDown];
-    [_face setBackgroundImage: [UIImage imageNamed:@"icone voltar.png"] forState: UIControlStateNormal];
-    [self.view addSubview: _face];
-    
-    _face2 = [[UIButton alloc] initWithFrame:CGRectMake(self.view.center.x*1.75 -50, self.view.center.y, 100, 100)];
-    [_face2 addTarget:self action:@selector(botaozin2) forControlEvents:UIControlEventTouchDown];
-    [_face2 setBackgroundImage: [UIImage imageNamed:@"icone voltar.png"] forState: UIControlStateNormal];
-    [self.view addSubview: _face2];
+//    _face = [[UIButton alloc] initWithFrame:CGRectMake(self.view.center.x*0.25 -50, self.view.center.y, 100, 100)];
+//    [_face addTarget:self action:@selector(botaozin) forControlEvents:UIControlEventTouchDown];
+//    [_face setBackgroundImage: [UIImage imageNamed:@"icone voltar.png"] forState: UIControlStateNormal];
+//    [self.view addSubview: _face];
+//    
+//    _face2 = [[UIButton alloc] initWithFrame:CGRectMake(self.view.center.x*1.75 -50, self.view.center.y, 100, 100)];
+//    [_face2 addTarget:self action:@selector(botaozin2) forControlEvents:UIControlEventTouchDown];
+//    [_face2 setBackgroundImage: [UIImage imageNamed:@"icone voltar.png"] forState: UIControlStateNormal];
+//    [self.view addSubview: _face2];
 }
 
 -(void)willMoveFromView:(SKView *)view{

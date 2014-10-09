@@ -7,6 +7,7 @@
 //
 
 #import "Stage2.h"
+#import "Atributter.h"
 #import "MascarasColisao.h"
 
 @implementation Stage2
@@ -21,12 +22,11 @@
         //self.spinner.size = CGSizeMake(self.size.width/4, 30);
         self.spinner.position = CGPointMake(self.spinner.size.width/2, self.size.height-self.size.height/3);
         self.spinner.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: self.spinner.size];
-        [self setWoodNodePropertiesTo: self.spinner];
+        [Atributter setWoodNodePropertiesTo: self.spinner];
         self.spinner.physicsBody.density = INT32_MAX;
         self.spinner.physicsBody.affectedByGravity = NO;
         self.spinner.physicsBody.restitution = 1.0;
         
-
         [self addChild: self.spinner];
         [self performSelector:@selector(spinnerAction) withObject:nil afterDelay:0.7];
     }

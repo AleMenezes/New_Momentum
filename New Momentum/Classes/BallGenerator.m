@@ -27,8 +27,8 @@
             ball.physicsBody.density = 1.0f;
             ball.physicsBody.restitution = 0.5;
             ball.physicsBody.categoryBitMask = goldBallMask;
-            ball.physicsBody.contactTestBitMask = blueBallMask | woodMask | edgeMask | goldBallMask;
-            ball.physicsBody.collisionBitMask = blueBallMask | woodMask | edgeMask | goldBallMask;
+            ball.physicsBody.contactTestBitMask = blueBallMask | woodMask | edgeMask | goldBallMask | trollMask;
+            ball.physicsBody.collisionBitMask = blueBallMask | woodMask | edgeMask | goldBallMask | trollMask;
             break;
         case 1:
             ball =[[SKSpriteNode alloc] initWithImageNamed:@"blue sphere.png"];
@@ -37,8 +37,8 @@
             ball.physicsBody.density = 19.0f;
             ball.physicsBody.restitution = 0.3;
             ball.physicsBody.categoryBitMask = blueBallMask;
-            ball.physicsBody.contactTestBitMask = goldBallMask | woodMask | edgeMask | blueBallMask;
-            ball.physicsBody.collisionBitMask =  goldBallMask | woodMask| edgeMask | blueBallMask;
+            ball.physicsBody.contactTestBitMask = goldBallMask | woodMask | edgeMask | blueBallMask | trollMask;
+            ball.physicsBody.collisionBitMask =  goldBallMask | woodMask| edgeMask | blueBallMask | trollMask;
             break;
         case 2:
             break;
@@ -66,8 +66,8 @@
             ball.physicsBody.density = 1.0f;
             ball.physicsBody.restitution = 0.5;
             ball.physicsBody.categoryBitMask = goldBallMask;
-            ball.physicsBody.contactTestBitMask = blueBallMask | woodMask | edgeMask;
-            ball.physicsBody.collisionBitMask = blueBallMask | woodMask | edgeMask;
+            ball.physicsBody.contactTestBitMask = blueBallMask | woodMask | edgeMask | trollMask;
+            ball.physicsBody.collisionBitMask = blueBallMask | woodMask | edgeMask | trollMask;
             break;
         case 1:
             ball =[[SKSpriteNode alloc] initWithImageNamed:@"blue sphere.png"];
@@ -76,8 +76,8 @@
             ball.physicsBody.density = 19.0f;
             ball.physicsBody.restitution = 0.3;
             ball.physicsBody.categoryBitMask = blueBallMask;
-            ball.physicsBody.contactTestBitMask = goldBallMask | woodMask | edgeMask;
-            ball.physicsBody.collisionBitMask =  goldBallMask | woodMask| edgeMask;
+            ball.physicsBody.contactTestBitMask = goldBallMask | woodMask | edgeMask | trollMask;
+            ball.physicsBody.collisionBitMask =  goldBallMask | woodMask | edgeMask | trollMask;
             break;
         case 2:
             break;
@@ -92,6 +92,8 @@
     
     return ball;
 }
+
+
 
 
 

@@ -14,19 +14,19 @@
 
 @property NSUserDefaults *preferences;
 
+@property UIButton *buttomReset;
+@property UIButton *buttomReturnToMenu;
+
 @property int stageType;
+@property SKSpriteNode *stageElements;
+
 @property SKSpriteNode *edgeBottomLeft;
 @property SKSpriteNode *edgeBottomRight;
 @property SKSpriteNode *goldBall;
 @property SKSpriteNode *blueBall;
 @property SKSpriteNode *target;
 
-@property UIButton *reset;
-@property UIButton *returnToMenu;
-
 -(id)initWithSize:(CGSize)size andType:(int)number;
--(void)setEdgePropertiesTo: (SKSpriteNode*)node;
--(void)setWoodNodePropertiesTo: (SKSpriteNode*)node;
 
 -(void)buildStage:(CGSize)size;
 -(void)cleanStage;
