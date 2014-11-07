@@ -124,13 +124,13 @@
     self.blueBall.physicsBody.velocity = CGVectorMake(0, 0);
     [[self blueBall] runAction: [SKAction moveTo:CGPointMake(location.x, location.y) duration:0.05]];
     
-    UIColor *cor = [UIColor colorWithRed: (arc4random()%255)/255.0
-                                   green: (arc4random()%255)/255.0
-                                    blue: (arc4random()%255)/255.0
-                                   alpha:1.0];
-    SKSpriteNode *node = [SKSpriteNode spriteNodeWithColor: cor size: CGSizeMake(10, 10)];
-    node.position = CGPointMake(location.x, location.y);
-    [self addChild: node];
+//    UIColor *cor = [UIColor colorWithRed: (arc4random()%255)/255.0
+//                                   green: (arc4random()%255)/255.0
+//                                    blue: (arc4random()%255)/255.0
+//                                   alpha:1.0];
+//    SKSpriteNode *node = [SKSpriteNode spriteNodeWithColor: cor size: CGSizeMake(10, 10)];
+//    node.position = CGPointMake(location.x, location.y);
+//    [self addChild: node];
 }
 
 #pragma touch methods
@@ -148,6 +148,10 @@
         
         if (CGRectContainsPoint([self edgeBottomRight].frame, location)) {
             [[self edgeBottomRight] runAction: gira];
+            return;
+        }
+        if (CGRectContainsPoint([self plank].frame, location)) {
+            [self.plank.physicsBody applyTorque:-100];
             return;
         }
 

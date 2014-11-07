@@ -11,8 +11,12 @@
 		F63A626619C0D1EB0047E8B8 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63A626519C0D1EB0047E8B8 /* FacebookSDK.framework */; };
 		F63A626919C0E78E0047E8B8 /* WebService.m in Sources */ = {isa = PBXBuildFile; fileRef = F63A626819C0E78E0047E8B8 /* WebService.m */; };
 		F63A626C19C0E89E0047E8B8 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F63A626A19C0E89E0047E8B8 /* Reachability.m */; };
+		F6414CBE1A0D520D001C3C2E /* sprites troll.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414CBD1A0D520D001C3C2E /* sprites troll.png */; };
 		F652DF5119E70F9D003FD830 /* troll face.png in Resources */ = {isa = PBXBuildFile; fileRef = F652DF5019E70F9D003FD830 /* troll face.png */; };
 		F652DF5419E71C7E003FD830 /* Atributter.m in Sources */ = {isa = PBXBuildFile; fileRef = F652DF5319E71C7E003FD830 /* Atributter.m */; };
+		F652DF6D19E85D7B003FD830 /* GameplayBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F652DF6B19E85D7B003FD830 /* GameplayBarVC.m */; };
+		F652DF6E19E85D7B003FD830 /* GameplayBarVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F652DF6C19E85D7B003FD830 /* GameplayBarVC.xib */; };
+		F652DF7019E85DDB003FD830 /* fundo.png in Resources */ = {isa = PBXBuildFile; fileRef = F652DF6F19E85DDB003FD830 /* fundo.png */; };
 		F67ED4A419C75A0700B266BD /* icone voltar.png in Resources */ = {isa = PBXBuildFile; fileRef = F67ED4A319C75A0700B266BD /* icone voltar.png */; };
 		F68B8C98199552230042E014 /* StageGeneric.m in Sources */ = {isa = PBXBuildFile; fileRef = F68B8C97199552230042E014 /* StageGeneric.m */; };
 		F68B8CA1199557EC0042E014 /* Stage1.m in Sources */ = {isa = PBXBuildFile; fileRef = F68B8CA0199557EC0042E014 /* Stage1.m */; };
@@ -57,10 +61,15 @@
 		F63A626819C0E78E0047E8B8 /* WebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebService.m; sourceTree = "<group>"; };
 		F63A626A19C0E89E0047E8B8 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		F63A626B19C0E89E0047E8B8 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		F6414CBD1A0D520D001C3C2E /* sprites troll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sprites troll.png"; sourceTree = "<group>"; };
 		F652DF4F19E703D5003FD830 /* MascarasColisao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MascarasColisao.h; sourceTree = "<group>"; };
 		F652DF5019E70F9D003FD830 /* troll face.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "troll face.png"; sourceTree = "<group>"; };
 		F652DF5219E71C7E003FD830 /* Atributter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Atributter.h; sourceTree = "<group>"; };
 		F652DF5319E71C7E003FD830 /* Atributter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Atributter.m; sourceTree = "<group>"; };
+		F652DF6A19E85D7B003FD830 /* GameplayBarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameplayBarVC.h; sourceTree = "<group>"; };
+		F652DF6B19E85D7B003FD830 /* GameplayBarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameplayBarVC.m; sourceTree = "<group>"; };
+		F652DF6C19E85D7B003FD830 /* GameplayBarVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameplayBarVC.xib; sourceTree = "<group>"; };
+		F652DF6F19E85DDB003FD830 /* fundo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fundo.png; sourceTree = "<group>"; };
 		F67ED4A319C75A0700B266BD /* icone voltar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icone voltar.png"; sourceTree = "<group>"; };
 		F68B8C96199552230042E014 /* StageGeneric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StageGeneric.h; sourceTree = "<group>"; };
 		F68B8C97199552230042E014 /* StageGeneric.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StageGeneric.m; sourceTree = "<group>"; };
@@ -214,6 +223,9 @@
 				F652DF5319E71C7E003FD830 /* Atributter.m */,
 				F6D4461C19941461003F2AEA /* BallGenerator.h */,
 				F6D4461D19941461003F2AEA /* BallGenerator.m */,
+				F652DF6A19E85D7B003FD830 /* GameplayBarVC.h */,
+				F652DF6B19E85D7B003FD830 /* GameplayBarVC.m */,
+				F652DF6C19E85D7B003FD830 /* GameplayBarVC.xib */,
 				F68B8C96199552230042E014 /* StageGeneric.h */,
 				F68B8C97199552230042E014 /* StageGeneric.m */,
 				F63A626B19C0E89E0047E8B8 /* Reachability.h */,
@@ -227,6 +239,8 @@
 		F6D4461419941265003F2AEA /* Imagens */ = {
 			isa = PBXGroup;
 			children = (
+				F6414CBD1A0D520D001C3C2E /* sprites troll.png */,
+				F652DF6F19E85DDB003FD830 /* fundo.png */,
 				F652DF5019E70F9D003FD830 /* troll face.png */,
 				F6C292FB19DF2ABB00444678 /* baby troll.png */,
 				F67ED4A319C75A0700B266BD /* icone voltar.png */,
@@ -314,6 +328,9 @@
 			files = (
 				F6AA97801937C7CC00D5AAE6 /* Images.xcassets in Resources */,
 				F67ED4A419C75A0700B266BD /* icone voltar.png in Resources */,
+				F652DF6E19E85D7B003FD830 /* GameplayBarVC.xib in Resources */,
+				F6414CBE1A0D520D001C3C2E /* sprites troll.png in Resources */,
+				F652DF7019E85DDB003FD830 /* fundo.png in Resources */,
 				F6AA97761937C7CC00D5AAE6 /* Main_iPad.storyboard in Resources */,
 				F6AA97731937C7CC00D5AAE6 /* Main_iPhone.storyboard in Resources */,
 				F652DF5119E70F9D003FD830 /* troll face.png in Resources */,
@@ -347,6 +364,7 @@
 				F6AA97791937C7CC00D5AAE6 /* ViewController.m in Sources */,
 				F652DF5419E71C7E003FD830 /* Atributter.m in Sources */,
 				F68B8C98199552230042E014 /* StageGeneric.m in Sources */,
+				F652DF6D19E85D7B003FD830 /* GameplayBarVC.m in Sources */,
 				F6AA97701937C7CC00D5AAE6 /* AppDelegate.m in Sources */,
 				F6AA976C1937C7CC00D5AAE6 /* main.m in Sources */,
 				F6AA979E1937C82D00D5AAE6 /* InitialMenu.m in Sources */,

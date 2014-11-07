@@ -25,9 +25,9 @@
     node.physicsBody.categoryBitMask = edgeMask;
     node.physicsBody.contactTestBitMask = goldBallMask | blueBallMask | woodMask;
     node.physicsBody.collisionBitMask = goldBallMask | blueBallMask | woodMask;
-    node.physicsBody.dynamic = NO;
+    node.physicsBody.dynamic = YES;
     node.physicsBody.affectedByGravity = NO;
-    node.physicsBody.allowsRotation = NO;
+    node.physicsBody.allowsRotation = YES;
     node.physicsBody.density = INT32_MAX;
     node.physicsBody.restitution = 0.75;
 }

@@ -34,9 +34,9 @@
 }
 
 -(void)spinnerAction{
-    SKAction *spin = [SKAction rotateByAngle: -M_PI duration:0.4];
-    [self.spinner runAction:spin];
-    [self performSelector:@selector(spinnerAction) withObject:nil afterDelay:0.4];
+//    SKAction *spin = [SKAction rotateByAngle: -M_PI duration:0.4];
+//    [self.spinner runAction:spin];
+//    [self performSelector:@selector(spinnerAction) withObject:nil afterDelay:0.4];
 }
 
 #pragma mark touch events

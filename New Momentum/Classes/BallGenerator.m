@@ -21,9 +21,10 @@
     SKSpriteNode *ball;
     switch (type) {
         case 0:
-            ball =[[SKSpriteNode alloc] initWithImageNamed:@"gold sphere.png"];
+            
+            ball = [SKSpriteNode spriteNodeWithImageNamed:@"gold sphere.png"];
             [ball setSize:CGSizeMake(30, 30)];
-            [ball setPhysicsBody:[SKPhysicsBody bodyWithCircleOfRadius:12]];
+            [ball setPhysicsBody:[SKPhysicsBody bodyWithCircleOfRadius:20]];
             ball.physicsBody.density = 1.0f;
             ball.physicsBody.restitution = 0.5;
             ball.physicsBody.categoryBitMask = goldBallMask;
@@ -31,7 +32,7 @@
             ball.physicsBody.collisionBitMask = blueBallMask | woodMask | edgeMask | goldBallMask | trollMask;
             break;
         case 1:
-            ball =[[SKSpriteNode alloc] initWithImageNamed:@"blue sphere.png"];
+            ball = [SKSpriteNode spriteNodeWithImageNamed:@"blue sphere.png"];
             [ball setSize:CGSizeMake(30, 30)];
             [ball setPhysicsBody:[SKPhysicsBody bodyWithCircleOfRadius:12]];
             ball.physicsBody.density = 19.0f;
@@ -60,7 +61,8 @@
     SKSpriteNode *ball;
     switch (type) {
         case 0:
-            ball =[[SKSpriteNode alloc] initWithImageNamed:@"gold sphere.png"];
+            
+            ball = [SKSpriteNode spriteNodeWithImageNamed:@"gold sphere.png"];
             [ball setSize:CGSizeMake(30, 30)];
             [ball setPhysicsBody:[SKPhysicsBody bodyWithCircleOfRadius:12]];
             ball.physicsBody.density = 1.0f;
@@ -70,7 +72,7 @@
             ball.physicsBody.collisionBitMask = blueBallMask | woodMask | edgeMask | trollMask;
             break;
         case 1:
-            ball =[[SKSpriteNode alloc] initWithImageNamed:@"blue sphere.png"];
+            ball = [SKSpriteNode spriteNodeWithImageNamed:@"blue sphere.png"];
             [ball setSize:CGSizeMake(30, 30)];
             [ball setPhysicsBody:[SKPhysicsBody bodyWithCircleOfRadius:12]];
             ball.physicsBody.density = 19.0f;

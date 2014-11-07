@@ -2,7 +2,6 @@
 //  ViewController.h
 //  New Momentum
 //
-
 //  Copyright (c) 2014 Alessandro Camillo Gimenez de Menezes. All rights reserved.
 //
 

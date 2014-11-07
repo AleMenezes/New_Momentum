@@ -9,8 +9,8 @@
 #import <SpriteKit/SpriteKit.h>
 #import <FacebookSDK/FacebookSDK.h>
 #import "WebService.h"
+#import "StageGeneric.h"
 #import "Stage1.h"
-
 
 @interface InitialMenu : SKScene <SKPhysicsContactDelegate, FBLoginViewDelegate>
 
