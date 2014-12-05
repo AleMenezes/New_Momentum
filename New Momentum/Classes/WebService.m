@@ -123,6 +123,7 @@
 }
 
 +(BOOL)setScore{
+    
     if ([self check]){
         /* make the API call */
         NSString *string = [NSString stringWithFormat:@"%d", arc4random()%10000];

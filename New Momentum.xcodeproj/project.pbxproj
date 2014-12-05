@@ -37,6 +37,8 @@
 		F6AA97911937C7CC00D5AAE6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F6AA978F1937C7CC00D5AAE6 /* InfoPlist.strings */; };
 		F6AA97931937C7CC00D5AAE6 /* New_MomentumTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AA97921937C7CC00D5AAE6 /* New_MomentumTests.m */; };
 		F6AA979E1937C82D00D5AAE6 /* InitialMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AA979D1937C82D00D5AAE6 /* InitialMenu.m */; };
+		F6BDD5411A1670D2004A3403 /* Lixo papão - SENAC-20.png in Resources */ = {isa = PBXBuildFile; fileRef = F6BDD5401A1670D2004A3403 /* Lixo papão - SENAC-20.png */; };
+		F6BDD5471A1A6E94004A3403 /* Lixo papão - SENAC-21.png in Resources */ = {isa = PBXBuildFile; fileRef = F6BDD5461A1A6E94004A3403 /* Lixo papão - SENAC-21.png */; };
 		F6C292FC19DF2ABB00444678 /* baby troll.png in Resources */ = {isa = PBXBuildFile; fileRef = F6C292FB19DF2ABB00444678 /* baby troll.png */; };
 		F6D44618199412BE003F2AEA /* gold sphere.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D44616199412BE003F2AEA /* gold sphere.png */; };
 		F6D4461A199412D7003F2AEA /* blue sphere.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D44619199412D7003F2AEA /* blue sphere.png */; };
@@ -98,6 +100,8 @@
 		F6AA97921937C7CC00D5AAE6 /* New_MomentumTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = New_MomentumTests.m; sourceTree = "<group>"; };
 		F6AA979C1937C82D00D5AAE6 /* InitialMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialMenu.h; sourceTree = "<group>"; };
 		F6AA979D1937C82D00D5AAE6 /* InitialMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialMenu.m; sourceTree = "<group>"; };
+		F6BDD5401A1670D2004A3403 /* Lixo papão - SENAC-20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Lixo papão - SENAC-20.png"; sourceTree = "<group>"; };
+		F6BDD5461A1A6E94004A3403 /* Lixo papão - SENAC-21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Lixo papão - SENAC-21.png"; sourceTree = "<group>"; };
 		F6C292FB19DF2ABB00444678 /* baby troll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "baby troll.png"; sourceTree = "<group>"; };
 		F6D44616199412BE003F2AEA /* gold sphere.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gold sphere.png"; sourceTree = "<group>"; };
 		F6D44619199412D7003F2AEA /* blue sphere.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue sphere.png"; sourceTree = "<group>"; };
@@ -239,7 +243,9 @@
 		F6D4461419941265003F2AEA /* Imagens */ = {
 			isa = PBXGroup;
 			children = (
+				F6BDD5401A1670D2004A3403 /* Lixo papão - SENAC-20.png */,
 				F6414CBD1A0D520D001C3C2E /* sprites troll.png */,
+				F6BDD5461A1A6E94004A3403 /* Lixo papão - SENAC-21.png */,
 				F652DF6F19E85DDB003FD830 /* fundo.png */,
 				F652DF5019E70F9D003FD830 /* troll face.png */,
 				F6C292FB19DF2ABB00444678 /* baby troll.png */,
@@ -326,9 +332,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6BDD5411A1670D2004A3403 /* Lixo papão - SENAC-20.png in Resources */,
 				F6AA97801937C7CC00D5AAE6 /* Images.xcassets in Resources */,
 				F67ED4A419C75A0700B266BD /* icone voltar.png in Resources */,
 				F652DF6E19E85D7B003FD830 /* GameplayBarVC.xib in Resources */,
+				F6BDD5471A1A6E94004A3403 /* Lixo papão - SENAC-21.png in Resources */,
 				F6414CBE1A0D520D001C3C2E /* sprites troll.png in Resources */,
 				F652DF7019E85DDB003FD830 /* fundo.png in Resources */,
 				F6AA97761937C7CC00D5AAE6 /* Main_iPad.storyboard in Resources */,

@@ -12,7 +12,6 @@
 #import "BallGenerator.h"
 #import "MascarasColisao.h"
 #import "GameplayBarVC.h"
-#import "GameplayBarVC.h"
 
 
 @implementation StageGeneric
@@ -103,27 +102,19 @@
         [self setSelectorTo: botao];
     }
     
-//    CABasicAnimation *anime = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
-//    anime.duration = 0.01;
-//    anime.additive = YES;
-//    anime.removedOnCompletion = NO;
-//    anime.fillMode = kCAFillModeForwards;
-//    anime.toValue = [NSNumber numberWithFloat:M_PI/2];
-//    
-//    CGSize buttomSize = CGSizeMake(50, 50);
-//    [self setButtomReset: [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width - buttomSize.width -20, 20, 50, 50)]];
-//    [[self buttomReset] addTarget:self action:@selector(resetStage) forControlEvents:UIControlEventTouchDown];
-//    [[self buttomReset] setBackgroundImage: [UIImage imageNamed:@"icone voltar.png"] forState: UIControlStateNormal];
-//    [[self buttomReset] setBackgroundImage: [UIImage imageNamed:@"icone voltar.png"] forState: UIControlStateSelected];
-//    [[self buttomReset] setTag: 11];
-//    [[self buttomReset].layer addAnimation:anime forKey:nil];
-//    [self.view addSubview: [self buttomReset]];
+    //remove from the array the buttons that have an independent toggle
+    //done from highest index to lower, else it will bug =x, couldnt think of a better solution for the independent toggles
+    [self.buttonsArray removeObjectAtIndex: 11];
+    
+    [self.buttonsArray removeObjectAtIndex: 3];
+    
+    [self.buttonsArray removeObjectAtIndex: 0];
 }
 
 -(void)willMoveFromView:(SKView *)view{
-    [[self buttomReset] removeFromSuperview];
-    [[self buttomReturnToMenu] removeFromSuperview];
     
+//    [[self buttomReset] removeFromSuperview];
+//    [[self buttomReturnToMenu] removeFromSuperview];
     
 }
 
@@ -176,15 +167,14 @@
     else{
         self.physicsWorld.gravity = CGVectorMake(0, 0);
     }
-
 }
 
 -(void)buttomPressed:(id)sender{
    //continua aki +/-
     UIButton *b = (UIButton *)sender;
-    NSLog(@"%d", b.tag);
+    self.selectedButtomTag = (int)b.tag;
     
-    
+
     for (UIButton * botao in self.buttonsArray) {
         if (botao != b) {
             botao.selected = NO;
@@ -209,12 +199,11 @@
 }
 
 -(void)resetStage{
-    self.buttomReset.selected =  !self.buttomReset.selected ;
     [self cleanStage];
-    [self buildStage:self.view.bounds.size];
+    [self buildStage: self.view.bounds.size];
     
-    for (UIButton * botao in self.buttonsArray) {
-        if (botao.tag == 3) {
+    for (UIButton * botao in [self.view subviews]) {
+        if ([botao isKindOfClass: [UIButton class]] && (int)botao.tag == 3) {
             botao.selected = NO;
             self.physicsWorld.gravity = CGVectorMake(0, 0);
         }

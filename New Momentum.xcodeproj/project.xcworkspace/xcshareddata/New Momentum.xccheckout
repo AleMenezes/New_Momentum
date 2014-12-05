@@ -14,7 +14,7 @@
 		<string>https://github.com/AleMenezes/New_Momentum.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>New Momentum.xcodeproj/project.xcworkspace</string>
+	<string>New Momentum.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>F4E5184BD87462934B6D095B388FA2434F50CE4F</key>

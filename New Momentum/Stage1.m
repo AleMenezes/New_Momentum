@@ -184,6 +184,15 @@
     
 }
 
+-(NSMutableArray*)loadSpriteSheetFromImageWithName:(NSString*)name withNumberOfSprites:(int)numSprites withNumberOfRows:(int)numRows withNumberOfSpritesPerRow:(int)numSpritesPerRow{
+    
+    NSMutableArray* animationSheet = [super loadSpriteSheetFromImageWithName: name
+                                                         withNumberOfSprites: numSprites
+                                                            withNumberOfRows: numRows
+                                                   withNumberOfSpritesPerRow: numSpritesPerRow];
+    return animationSheet;
+}
+
 //-(void)addNinja{
 //    CGSize woodBaseSize = CGSizeMake(100, 100);
 //    SKSpriteNode * ninja = [[SKSpriteNode alloc] initWithImageNamed:@"ninja.png"];

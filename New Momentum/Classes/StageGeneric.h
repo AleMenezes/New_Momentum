@@ -7,7 +7,7 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
-#import "GameplayBarVC.h"
+
 
 #define rgb(r, g, b)  [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
 
@@ -15,9 +15,7 @@
 
 @property NSUserDefaults *preferences;
 
-@property UIButton *buttomReturnToMenu;
 @property NSMutableArray *buttonsArray;
-@property UIButton *buttomReset;
 
 @property int stageType;
 @property SKSpriteNode *stageElements;
@@ -31,6 +29,7 @@
 @property NSArray* frameCoordinates;
 
 @property BOOL targetGotHit;
+@property int selectedButtomTag;
 
 -(id)initWithSize:(CGSize)size andType:(int)number;
 
@@ -38,6 +37,6 @@
 -(void)cleanStage;
 -(void)resetStage;
 
-
+-(NSMutableArray*)loadSpriteSheetFromImageWithName:(NSString*)name withNumberOfSprites:(int)numSprites withNumberOfRows:(int)numRows withNumberOfSpritesPerRow:(int)numSpritesPerRow;
 
 @end
