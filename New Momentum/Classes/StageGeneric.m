@@ -4,7 +4,6 @@
 //
 //  Created by Alessandro Camillo Gimenez de Menezes on 08/08/14.
 //  Copyright (c) 2014 Alessandro Camillo Gimenez de Menezes. All rights reserved.
-//
 
 #import "StageGeneric.h"
 #import "InitialMenu.h"
@@ -12,7 +11,6 @@
 #import "BallGenerator.h"
 #import "MascarasColisao.h"
 #import "GameplayBarVC.h"
-
 
 @implementation StageGeneric
 
@@ -93,7 +91,6 @@
     [self.stageElements addChild: self.target];
 }
 
-
 #pragma UIkit elements methods if necessary
 -(void)didMoveToView:(SKView *)view{
     self.buttonsArray = [GameplayBarVC gameplayBarPreset];
@@ -101,7 +98,6 @@
     for (UIButton * botao in self.buttonsArray) {
         [self setSelectorTo: botao];
     }
-    
     //remove from the array the buttons that have an independent toggle
     //done from highest index to lower, else it will bug =x, couldnt think of a better solution for the independent toggles
     [self.buttonsArray removeObjectAtIndex: 11];
@@ -213,15 +209,64 @@
 
 #pragma touch methods
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-//    for (UITouch *touch in touches) {
-//        CGPoint location = [touch locationInNode:self];
-//    }
+    for (UITouch *touch in touches) {
+        CGPoint location = [touch locationInNode:self];
+        
+        NSLog(@"%0.1f, %0.1f", location.x, location.y);
+        switch (self.selectedButtomTag) {
+            case 4:{
+                self.blueBall.physicsBody.affectedByGravity = NO;
+                self.blueBall.physicsBody.velocity = CGVectorMake(0, 0);
+                [self.blueBall removeAllActions];
+                break;
+            }
+            case 5:{
+                self.goldBall.physicsBody.affectedByGravity = NO;
+                self.goldBall.physicsBody.velocity = CGVectorMake(0, 0);
+                [self.goldBall removeAllActions];
+                break;
+            }
+        }
+    }
 }
 
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
+    for (UITouch *touch in touches) {
+        CGPoint location = [touch locationInNode:self];
+        NSLog(@"%0.1f, %0.1f", location.x, location.y);
+        switch (self.selectedButtomTag) {
+            case 4:{
+                [self moveNode: self.blueBall toPoint:location];
+                break;
+            }
+            case 5:{
+                [self moveNode: self.goldBall toPoint:location];
+                break;
+            }
+        }
+    }
 }
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
+    for (UITouch *touch in touches) {
+        CGPoint location = [touch locationInNode:self];
+        switch (self.selectedButtomTag) {
+            case 4:{
+                [self moveNode: self.blueBall toPoint:location];
+                self.blueBall.physicsBody.affectedByGravity = YES;
+                break;
+            }
+            case 5:{
+                [self moveNode: self.goldBall toPoint:location];
+                self.goldBall.physicsBody.affectedByGravity = YES;
+                break;
+            }
+        }
+    }
+}
+
+-(void)moveNode:(SKSpriteNode *)node toPoint:(CGPoint)location{
+    [node runAction: [SKAction moveTo: location duration:0.05]];
 }
 
 #pragma colision methods

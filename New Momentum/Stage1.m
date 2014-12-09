@@ -119,53 +119,20 @@
 //    [super resetStage];
 //}
 
--(void)moveBlueBallToPoint: (CGPoint)location{
-    [[self blueBall] removeAllActions];
-    self.blueBall.physicsBody.velocity = CGVectorMake(0, 0);
-    [[self blueBall] runAction: [SKAction moveTo:CGPointMake(location.x, location.y) duration:0.05]];
-    
-//    UIColor *cor = [UIColor colorWithRed: (arc4random()%255)/255.0
-//                                   green: (arc4random()%255)/255.0
-//                                    blue: (arc4random()%255)/255.0
-//                                   alpha:1.0];
-//    SKSpriteNode *node = [SKSpriteNode spriteNodeWithColor: cor size: CGSizeMake(10, 10)];
-//    node.position = CGPointMake(location.x, location.y);
-//    [self addChild: node];
-}
 
 #pragma touch methods
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    for (UITouch *touch in touches) {
-        CGPoint location = [touch locationInNode:self];
-        
-        NSLog(@"%0.1f, %0.1f", location.x, location.y);
-        
-        SKAction *gira= [SKAction rotateByAngle:M_PI duration:0.3];
-        if (CGRectContainsPoint([self edgeBottomLeft].frame, location)) {
-            [[self edgeBottomLeft] runAction: gira];
-            return;
-        }
-        
-        if (CGRectContainsPoint([self edgeBottomRight].frame, location)) {
-            [[self edgeBottomRight] runAction: gira];
-            return;
-        }
-        if (CGRectContainsPoint([self plank].frame, location)) {
-            [self.plank.physicsBody applyTorque:-100];
-            return;
-        }
-
-        [self moveBlueBallToPoint: location];
-    }
+    [super touchesBegan: touches withEvent: event];
+    
 }
 
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
-//    for (UITouch *touch in touches) {
-//        CGPoint location = [touch locationInNode:self];
-//    }
+    [super touchesMoved: touches withEvent: event];
+
 }
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
+    [super touchesEnded:  touches withEvent: event];
 
 }
 

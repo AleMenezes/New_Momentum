@@ -34,8 +34,8 @@
 
 +(void)setWoodNodePropertiesTo: (SKSpriteNode*)node{
     node.physicsBody.categoryBitMask = woodMask;
-    node.physicsBody.contactTestBitMask = goldBallMask | blueBallMask | edgeMask | woodMask;
-    node.physicsBody.collisionBitMask = goldBallMask | blueBallMask | edgeMask | woodMask;
+    node.physicsBody.contactTestBitMask = goldBallMask | blueBallMask | edgeMask | woodMask | trollMask;
+    node.physicsBody.collisionBitMask = goldBallMask | blueBallMask | edgeMask | woodMask | trollMask;
     node.physicsBody.dynamic = YES;
     node.physicsBody.affectedByGravity = YES;
     node.physicsBody.allowsRotation = YES;

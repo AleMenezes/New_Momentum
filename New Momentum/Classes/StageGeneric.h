@@ -26,6 +26,8 @@
 @property SKSpriteNode *blueBall;
 @property SKSpriteNode *target;
 
+@property SKSpriteNode *heldNode;
+
 @property NSArray* frameCoordinates;
 
 @property BOOL targetGotHit;
@@ -36,6 +38,8 @@
 -(void)buildStage:(CGSize)size;
 -(void)cleanStage;
 -(void)resetStage;
+
+-(void)moveNode:(SKSpriteNode *)node toPoint:(CGPoint)location;
 
 -(NSMutableArray*)loadSpriteSheetFromImageWithName:(NSString*)name withNumberOfSprites:(int)numSprites withNumberOfRows:(int)numRows withNumberOfSpritesPerRow:(int)numSpritesPerRow;
 
